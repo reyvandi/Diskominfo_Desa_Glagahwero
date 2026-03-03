@@ -132,5 +132,9 @@
     </body>
 </html>
 
+<<<<<<< HEAD
 // Madrid kalah
+=======
+{{-- Leo jelek --}}
+>>>>>>> 1bf22d8de301e5ec31589e0bdabd05d9a390106a
 <livewire:test />
