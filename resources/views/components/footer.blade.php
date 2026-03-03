@@ -13,11 +13,25 @@
 <body>
 
   <!-- FOOTER -->
-  <footer class="bg-[#0D2B5E] text-white px-10 py-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-2 gap-10">
+  <footer class="bg-[#0D2B5E] text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:justify-between items-start gap-20">
+
+      <!-- Paling Kiri: Map -->
+      <div class="md:w-1/3">
+        <h3 class="text-base font-bold mb-3">Location</h3>
+        <div class="w-80 h-44 md:h-40 lg:h-48 rounded overflow-hidden border border-white/10">
+          <iframe
+            src="https://maps.google.com/maps?q=Desa%20Glagahwero&z=15&output=embed"
+            class="w-full h-full border-0"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
 
       <!-- Kiri: About Us -->
-      <div>
+      <div class="md:w-1/3">
         <h3 class="text-base font-bold mb-3">About Us</h3>
         <p class="text-sm leading-relaxed text-gray-200">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -28,7 +42,7 @@
       </div>
 
       <!-- Kanan: Our Contact -->
-      <div>
+      <div class="md:w-1/3">
         <h3 class="text-base font-bold mb-3">Our Contact</h3>
         <p class="text-sm text-gray-200 mb-1">08123456789</p>
         <p class="text-sm text-gray-200 mb-4">jemberid@gmail.com</p>
