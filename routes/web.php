@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('footer');
+    return view('layouts.app');  // slot diisi beranda
 });
+
+// Route::get('/profil', function () {
+//     return view('pages.profil');   // slot diisi profil
+// });
