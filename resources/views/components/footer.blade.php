@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Footer Glagahwero</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
-</head>
-<body>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#0D2B5E] text-white py-10">
+ <footer class="bg-[#0D2B5E] text-white py-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:justify-between items-start gap-20">
 
       <!-- Paling Kiri: Map -->
@@ -78,9 +63,7 @@
           </a>
         </div>
       </div>
-
+      
     </div>
-  </footer>
+</footer>
 
-</body>
-</html>

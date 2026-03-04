@@ -1,5 +1,5 @@
 {{-- beranda.blade.php - Konten halaman beranda tanpa header & footer --}}
-
+@extends('layouts.app')
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap');
   :root {

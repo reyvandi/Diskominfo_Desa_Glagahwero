@@ -12,10 +12,29 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
-    return view('layouts.app');  // slot diisi beranda
-});
+    return view('pages.beranda');
+})->name('beranda');
+
+Route::get('/profil-desa', function () {
+    return view('pages.profil_desa');
+})->name('profil');
+
+Route::get('/berita', function () {
+    return view('pages.berita');
+})->name('berita');
+
+Route::get('/dokumen', function () {
+    return view('pages.dokumen');
+})->name('dokumen');
+
+Route::get('/produk-desa', function () {
+    return view('pages.produk_desa');
+})->name('produk');
+
+Route::get('/ppid', function () {
+    return view('pages.ppid'); // buat file ppid.blade.php kalau belum ada
+})->name('ppid');
 
 // Route::get('/profil', function () {
 //     return view('pages.profil');   // slot diisi profil
