@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -135,3 +136,5 @@
 </html>
 
 <livewire:test />
+=======
+>>>>>>> d63f28e1e93bee045712f93fc61e092490f07e04
