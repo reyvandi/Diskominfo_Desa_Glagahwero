@@ -15,7 +15,7 @@
     {{-- HEADER --}}
     @include('components.header')
 
-    {{-- KONTEN UTAMA --}}
+    {{-- KONTEN --}}
     <main class="flex-1">
         @include('pages.beranda')
     </main>

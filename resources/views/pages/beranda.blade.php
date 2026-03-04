@@ -56,28 +56,28 @@
 
 <!-- ===== 1. HERO SLIDER ===== -->
 <section class="hero-slider">
-  <div class="hero-slide hero-slide-1 active">
-    <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
-      <h1 class="hero-title">Glagahwero</h1>
+    <div class="hero-slide hero-slide-1 active" style="background-image: url('{{ asset('images/hero-1.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
+            <h1 class="hero-title">Glagahwero</h1>
+        </div>
     </div>
-  </div>
-  <div class="hero-slide hero-slide-2">
-    <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
-      <h1 class="hero-title">Glagahwero</h1>
+    <div class="hero-slide hero-slide-2" style="background-image: url('{{ asset('images/hero-2.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
+            <h1 class="hero-title">Glagahwero</h1>
+        </div>
     </div>
-  </div>
-  <div class="hero-slide hero-slide-3">
-    <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
-      <h1 class="hero-title">Glagahwero</h1>
+    <div class="hero-slide hero-slide-3" style="background-image: url('{{ asset('images/hero-3.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="flex flex-col items-center justify-center h-full gap-4 px-4 text-center">
+            <h1 class="hero-title">Glagahwero</h1>
+        </div>
     </div>
-  </div>
-  <div class="absolute bottom-5 left-0 right-0 flex justify-center">
-    <div class="hero-dots">
-      <div class="hero-dot active" onclick="goToSlide(0)"></div>
-      <div class="hero-dot" onclick="goToSlide(1)"></div>
-      <div class="hero-dot" onclick="goToSlide(2)"></div>
+    <div class="absolute bottom-5 left-0 right-0 flex justify-center">
+        <div class="hero-dots">
+            <div class="hero-dot active" onclick="goToSlide(0)"></div>
+            <div class="hero-dot" onclick="goToSlide(1)"></div>
+            <div class="hero-dot" onclick="goToSlide(2)"></div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- ===== 2. BERITA DESA ===== -->
@@ -97,7 +97,9 @@
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
           <p class="text-xs text-gray-500 leading-relaxed mb-3">Desa terbahagia Gotong Royong Art Per kembanman untuk tetap mendorong pemanfaatan teknologi informas...</p>
-          <button class="text-xs text-[#1D4ED8] border border-[#1D4ED8] px-3 py-1 rounded hover:bg-[#1D4ED8] hover:text-white transition">Baca Selengkapnya</button>
+          <div class="mt-2 text-right">
+            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
 
@@ -109,7 +111,9 @@
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
           <p class="text-xs text-gray-500 leading-relaxed mb-3">Desa terbahagia Gotong Royong Art Per kembanman untuk tetap mendorong pemanfaatan teknologi informas...</p>
-          <button class="text-xs text-[#1D4ED8] border border-[#1D4ED8] px-3 py-1 rounded hover:bg-[#1D4ED8] hover:text-white transition">Baca Selengkapnya</button>
+          <div class="mt-2 text-right">
+            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
 
@@ -121,7 +125,9 @@
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
           <p class="text-xs text-gray-500 leading-relaxed mb-3">Desa terbahagia Gotong Royong Art Per kembanman untuk tetap mendorong pemanfaatan teknologi informas...</p>
-          <button class="text-xs text-[#1D4ED8] border border-[#1D4ED8] px-3 py-1 rounded hover:bg-[#1D4ED8] hover:text-white transition">Baca Selengkapnya</button>
+          <div class="mt-2 text-right">
+            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
 
@@ -133,7 +139,9 @@
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
           <p class="text-xs text-gray-500 leading-relaxed mb-3">Desa terbahagia Gotong Royong Art Per kembanman untuk tetap mendorong pemanfaatan teknologi informas...</p>
-          <button class="text-xs text-[#1D4ED8] border border-[#1D4ED8] px-3 py-1 rounded hover:bg-[#1D4ED8] hover:text-white transition">Baca Selengkapnya</button>
+          <div class="mt-2 text-right">
+            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">Baca Selengkapnya</a>
+          </div>
         </div>
       </div>
 
@@ -141,41 +149,40 @@
   </div>
 </section>
 
+
 <!-- ===== 3. SELAMAT DATANG ===== -->
-<section class="py-14 px-6 bg-gray-50">
+<section class="py-14 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center text-[#0D2B5E] mb-10">Selamat Datang</h2>
     <div class="flex gap-10 items-start">
-      <div class="flex-1">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
-          <h3 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Sambutan Kepala Desa &nbsp; Glagahwero</h3>
-        </div>
-        <div class="text-sm text-gray-700 leading-relaxed space-y-3">
-          <p>Assalamualaikum warahmatullah wabarakatuh,<br>Salam sejahtera bagi kita semua.</p>
-          <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya, sehingga Website Resmi Desa Sumbersari ini hadir sebagai media informasi dan komunikasi bagi seluruh masyarakat.</p>
-          <p>Sebagai Kepala Desa Sumbersari, saya menyambut baik hadirnya website ini sebagai langkah nyata dalam meningkatkan transparansi, pelayanan publik, dan partisipasi masyarakat. Kami berkomitmen untuk terus mendorong pemanfaatan teknologi informasi guna mendukung tata kelola pemerintahan desa yang lebih efektif, terbuka, dan responsif terhadap kebutuhan warga.</p>
-          <p>Melalui website ini, masyarakat dapat memperoleh informasi mengenai program kerja, kegiatan desa, potensi wilayah, serta berbagai layanan administrasi secara lebih mudah dan cepat. Kami berharap platform ini tidak hanya menjadi sarana penyampaian informasi, tetapi juga menjadi ruang kolaboratif antara pemerintah desa dan masyarakat dalam membangun Desa Sumbersari yang maju, mandiri, dan sejahtera.</p>
-          <p>Terima kasih atas dukungan dan partisipasi seluruh masyarakat.</p>
-          <p>Wassalamualaikum warahmatullahi wabarakatuh.</p>
-          <p class="font-semibold text-[#0D2B5E] mt-2">EKI JULIO</p>
-        </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
+        <h3 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Sambutan Kepala Desa &nbsp; Glagahwero</h3>
       </div>
-      <div class="photo-frame mt-10">
-        <div class="frame-bg flex items-center justify-center">
-          <svg class="w-20 h-20 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-          </svg>
-        </div>
-        <div class="frame-accent-1"></div>
-        <div class="frame-accent-2"></div>
+      <div class="text-sm text-gray-700 leading-relaxed space-y-3 text-justify">
+        <p>Assalamualaikum warahmatullah wabarakatuh,<br>Salam sejahtera bagi kita semua.</p>
+        <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya, sehingga Website Resmi Desa Sumbersari ini hadir sebagai media informasi dan komunikasi bagi seluruh masyarakat.</p>
+        <p>Sebagai Kepala Desa Sumbersari, saya menyambut baik hadirnya website ini sebagai langkah nyata dalam meningkatkan transparansi, pelayanan publik, dan partisipasi masyarakat. Kami berkomitmen untuk terus mendorong pemanfaatan teknologi informasi guna mendukung tata kelola pemerintahan desa yang lebih efektif, terbuka, dan responsif terhadap kebutuhan warga.</p>
+        <p>Melalui website ini, masyarakat dapat memperoleh informasi mengenai program kerja, kegiatan desa, potensi wilayah, serta berbagai layanan administrasi secara lebih mudah dan cepat. Kami berharap platform ini tidak hanya menjadi sarana penyampaian informasi, tetapi juga menjadi ruang kolaboratif antara pemerintah desa dan masyarakat dalam membangun Desa Sumbersari yang maju, mandiri, dan sejahtera.</p>
+        <p>Terima kasih atas dukungan dan partisipasi seluruh masyarakat.</p>
+        <p>Wassalamualaikum warahmatullahi wabarakatuh.</p>
+        <p class="font-semibold text-[#0D2B5E] mt-2">EKI JULIO</p>
       </div>
+    </div>
+    <div class="photo-frame mt-10">
+      <div class="frame-bg flex items-center justify-center">
+        <img src="{{ asset('images/news.jpg') }}" alt="Kepala Desa" class="w-full h-full object-cover rounded">
+      </div>
+      <div class="frame-accent-1"></div>
+      <div class="frame-accent-2"></div>
+    </div>
     </div>
   </div>
 </section>
 
 <!-- ===== 4. APARAT PEMERINTAH DESA ===== -->
-<section class="aparat-section py-14 px-6">
+<section class="aparat-section py-14 px-6 bg-[#F4F8FD]">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
     <div class="relative flex items-center gap-4">
