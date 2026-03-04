@@ -81,18 +81,17 @@
 </section>
 
 <!-- ===== 2. BERITA DESA ===== -->
-<section class="py-12 px-6 bg-white">
+<section class="py-12 px-6 bg-[#F4F8FA]">
   <div class="max-w-6xl mx-auto">
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-lg font-bold text-[#0D2B5E] border-l-4 border-[#1D4ED8] pl-3 uppercase tracking-wide">Berita Desa</h2>
-      <button class="bg-[#E53E3E] hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded transition">Lihat Selengkapnya</button>
+      <button class="bg-[#C0392B] hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded transition">Lihat Selengkapnya</button>
     </div>
     <div class="grid grid-cols-4 gap-4">
 
       {{-- Card 1 --}}
       <div class="news-card">
-        <div class="news-img bg-gradient-to-br from-slate-300 to-slate-400">
-          <svg class="w-12 h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div class="news-img" style="background-image: url('{{ asset('images/news.jpg') }}'); background-size: cover; background-position: center;">
         </div>
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
@@ -105,8 +104,7 @@
 
       {{-- Card 2 --}}
       <div class="news-card">
-        <div class="news-img bg-gradient-to-br from-slate-300 to-slate-400">
-          <svg class="w-12 h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div class="news-img" style="background-image: url('{{ asset('images/news.jpg') }}'); background-size: cover; background-position: center;">
         </div>
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
@@ -119,8 +117,7 @@
 
       {{-- Card 3 --}}
       <div class="news-card">
-        <div class="news-img bg-gradient-to-br from-slate-300 to-slate-400">
-          <svg class="w-12 h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div class="news-img" style="background-image: url('{{ asset('images/news.jpg') }}'); background-size: cover; background-position: center;">
         </div>
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
@@ -133,8 +130,7 @@
 
       {{-- Card 4 --}}
       <div class="news-card">
-        <div class="news-img bg-gradient-to-br from-slate-300 to-slate-400">
-          <svg class="w-12 h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <div class="news-img" style="background-image: url('{{ asset('images/news.jpg') }}'); background-size: cover; background-position: center;">
         </div>
         <div class="p-3">
           <p class="text-xs font-semibold text-gray-800 leading-snug mb-2">Gotong Royong dan Pemberdayaan Petugas Kesehatan di Desa Karangbowo: Solusi Tingkatkan Layanan Kesehatan Primer</p>
