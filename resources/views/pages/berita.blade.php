@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <section class="py-10 bg-gray-50 min-h-screen">
   <div class="max-w-6xl mx-auto px-6">
 
@@ -135,3 +137,5 @@
 
   </div>
 </section>
+
+@endsection

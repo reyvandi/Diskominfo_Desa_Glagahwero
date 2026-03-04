@@ -1,6 +1,8 @@
 {{-- aparatur-desa.blade.php - Konten halaman aparatur desa tanpa header & footer --}}
 
 @extends('layouts.app')
+
+@section('content')
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 

@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <section class="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
@@ -96,6 +98,8 @@
         <button class="px-2 py-1 rounded hover:bg-gray-200 text-gray-400">&gt;</button>
       </div>
     </div>
+
+@endsection
 
   </div>
 </section>
