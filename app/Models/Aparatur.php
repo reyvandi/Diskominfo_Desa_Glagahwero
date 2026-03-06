@@ -10,6 +10,11 @@ class Aparatur extends Model
         'nama',
         'jabatan',
         'foto',
+        'alamat',
+        'pendidikan',
+        'ttl',
+        'periode',
+        'deskripsi',
         'urutan',
         'is_active',
     ];
