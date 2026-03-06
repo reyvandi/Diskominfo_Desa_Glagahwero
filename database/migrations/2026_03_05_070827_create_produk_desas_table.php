@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('produk_desas', function (Blueprint $table) {
+    Schema::create('produk_desas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('kategori'); // umkm, wisata, pakaian, makanan, adat
