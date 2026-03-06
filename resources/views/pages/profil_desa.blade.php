@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 <section class="bg-gray-100 min-h-screen py-10 px-4 md:px-8 font-sans">
   <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
 
@@ -300,3 +302,5 @@
     setActive('visi-misi');
   });
 </script>
+
+@endsection

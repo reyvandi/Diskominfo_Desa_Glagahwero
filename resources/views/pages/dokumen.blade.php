@@ -1,5 +1,7 @@
 
 @extends('layouts.app')
+
+@section('content')
 <section class="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
   <div class="max-w-6xl mx-auto">
 
@@ -93,6 +95,8 @@
 
   </div>
 </section>
+
+@endsection
 
 {{-- Animasi card masuk saat scroll --}}
 <script>

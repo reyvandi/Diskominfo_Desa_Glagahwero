@@ -1,13 +1,12 @@
-<<<<<<< HEAD
-{{-- beranda.blade.php - Konten halaman beranda tanpa header & footer --}}
 @extends('layouts.app')
-=======
+
+@section('content')
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
->>>>>>> 65866aebc6b91e879ed8c933d0dca9f93443910b
 <style>
   body { font-family: 'Poppins', sans-serif; }
   .font-dancing { font-family: 'Dancing Script', cursive; }
@@ -271,3 +270,5 @@
     btn.classList.add('bg-[#1D4ED8]', 'text-white');
   }
 </script>
+
+@endsection
