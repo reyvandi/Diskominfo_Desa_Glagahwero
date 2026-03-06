@@ -17,7 +17,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 @foreach($pimpinan as $item)
                 <div class="relative overflow-hidden rounded-2xl p-6 text-white shadow-[0_12px_40px_rgba(13,43,94,0.30)]"
-                     style="background: linear-gradient(145deg, #0D2B5E 0%, #1D4ED8 65%, #1a44b0 100%);">
+                     style="background: linear-gradient(145deg, #0D2B5E 0%, #1D4ED8 65%, #1a44b0 100%); animation: fadeUp 0.6s ease both;">
 
                     <div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-white/5 pointer-events-none"></div>
 
@@ -29,7 +29,7 @@
                                      class="w-full h-full object-cover object-top">
                             </div>
                             <span class="bg-amber-400 text-[#0D2B5E] text-[10px] font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap">
-                                2021 – 2025
+                                {{ $item->periode ?? '2021 - 2025' }}
                             </span>
                         </div>
 
@@ -43,11 +43,21 @@
                     <p class="text-xl font-bold tracking-tight mb-4">{{ $item->nama }}</p>
 
                     <div class="bg-white/10 rounded-xl px-3.5 mb-4">
-                        <div class="flex items-start gap-2.5 py-2 border-b border-white/10 text-xs">
-                            <span class="text-amber-400 font-semibold w-[72px] flex-shrink-0 text-[11.5px]">Jabatan</span>
-                            <span class="text-white/80 leading-relaxed">{{ $item->jabatan }}</span>
+                        @foreach([
+                            ['lbl' => 'Alamat',     'val' => $item->alamat     ?? '-'],
+                            ['lbl' => 'Pendidikan', 'val' => $item->pendidikan ?? '-'],
+                            ['lbl' => 'TTL',        'val' => $item->ttl        ?? '-'],
+                        ] as $row)
+                        <div class="flex items-start gap-2.5 py-2 border-b border-white/10 last:border-0 text-xs">
+                            <span class="text-amber-400 font-semibold w-[72px] flex-shrink-0 text-[11.5px]">{{ $row['lbl'] }}</span>
+                            <span class="text-white/80 leading-relaxed">{{ $row['val'] }}</span>
                         </div>
+                        @endforeach
                     </div>
+
+                    <p class="text-xs leading-relaxed text-white/70">
+                        {{ $item->deskripsi ?? '-' }}
+                    </p>
 
                 </div>
                 @endforeach
@@ -66,7 +76,6 @@
                     <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
                     <h2 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Perangkat Desa</h2>
                 </div>
-                {{-- Search --}}
                 <input wire:model.live.debounce.300ms="search"
                        type="text"
                        placeholder="Cari nama atau jabatan..."
@@ -80,7 +89,8 @@
             @else
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 @foreach($perangkat as $index => $item)
-                <div class="bg-white rounded-xl overflow-hidden shadow-[0_2px_12px_rgba(13,43,94,0.10)] hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(13,43,94,0.16)] transition-all duration-200">
+                <div class="bg-white rounded-xl overflow-hidden shadow-[0_2px_12px_rgba(13,43,94,0.10)] hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(13,43,94,0.16)] transition-all duration-200"
+                     style="animation: fadeUp 0.5s ease {{ $index * 0.05 }}s both">
                     <div class="w-full aspect-square overflow-hidden">
                         <img src="{{ $item->foto ? asset('storage/' . $item->foto) : asset('images/aparatur-foto.jpg') }}"
                              alt="{{ $item->nama }}"
@@ -105,4 +115,4 @@
         }
     </style>
 
-</div>  
+</div>
