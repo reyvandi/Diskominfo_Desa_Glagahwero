@@ -1,119 +1,11 @@
-{{-- aparatur-desa.blade.php - Konten halaman aparatur desa tanpa header & footer --}}
+{{-- aparatur-desa.blade.php - Full Tailwind --}}
 
 @extends('layouts.app')
 
 @section('content')
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-  :root {
-    --blue-dark: #0D2B5E;
-    --blue-main: #1D4ED8;
-  }
-
-  body { font-family: 'Poppins', sans-serif; }
-
-  .kepala-card {
-    background: linear-gradient(145deg, #0D2B5E 0%, #1D4ED8 65%, #1a44b0 100%);
-    border-radius: 16px;
-    padding: 24px;
-    color: #fff;
-    box-shadow: 0 12px 40px rgba(13, 43, 94, 0.30);
-    position: relative;
-    overflow: hidden;
-    animation: fadeUp 0.6s ease both;
-  }
-  .kepala-card:nth-child(2) { animation-delay: 0.12s; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .kepala-card::after {
-    content: '';
-    position: absolute;
-    bottom: -50px; right: -50px;
-    width: 200px; height: 200px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .kd-avatar {
-    width: 78px; height: 78px;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.3);
-    background: #b8c9e8;
-    overflow: hidden;
-    display: flex; align-items: flex-end; justify-content: center;
-    flex-shrink: 0;
-  }
-  .kd-avatar svg { width: 60px; fill: #8aa3c8; }
-
-  .kd-badge {
-    background: #F59E0B;
-    color: #0D2B5E;
-    font-size: 10px; font-weight: 700;
-    padding: 3px 10px; border-radius: 20px;
-    letter-spacing: 0.3px; white-space: nowrap;
-    display: inline-block; margin-top: 6px;
-  }
-
-  .kd-divider { width: 28px; height: 3px; background: #F59E0B; border-radius: 2px; margin-top: 6px; }
-
-  .kd-table {
-    background: rgba(255,255,255,0.10);
-    border-radius: 10px;
-    padding: 2px 14px;
-    margin-bottom: 14px;
-  }
-  .kd-row {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 12px;
-  }
-  .kd-row:last-child { border-bottom: none; }
-  .kd-lbl { color: #F59E0B; font-weight: 600; width: 72px; flex-shrink: 0; font-size: 11.5px; }
-  .kd-val { color: rgba(255,255,255,0.88); line-height: 1.5; }
-
-  /* PERANGKAT CARD */
-  .pcard {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(13,43,94,0.10);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    animation: fadeUp 0.5s ease both;
-  }
-  .pcard:nth-child(1) { animation-delay: 0.05s; }
-  .pcard:nth-child(2) { animation-delay: 0.10s; }
-  .pcard:nth-child(3) { animation-delay: 0.15s; }
-  .pcard:nth-child(4) { animation-delay: 0.20s; }
-  .pcard:nth-child(5) { animation-delay: 0.25s; }
-  .pcard:nth-child(6) { animation-delay: 0.30s; }
-  .pcard:nth-child(7) { animation-delay: 0.35s; }
-  .pcard:nth-child(8) { animation-delay: 0.40s; }
-
-  .pcard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(13,43,94,0.16);
-  }
-
-  .pcard-photo {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background: linear-gradient(160deg, #cdd9f0 0%, #b8c9e2 100%);
-    display: flex; align-items: flex-end; justify-content: center;
-    overflow: hidden;
-  }
-  .pcard-photo img { width: 100%; height: 100%; object-fit: cover; }
-  .pcard-photo svg { width: 80%; fill: #92aad0; }
-</style>
 
 <!-- ===== 1. PROFIL PIMPINAN DESA ===== -->
-<section class="py-12 px-6 bg-[#F4F8FD]">
+<section class="py-12 px-4 sm:px-6 bg-[#F4F8FD]">
   <div class="max-w-6xl mx-auto">
 
     {{-- Section Header --}}
@@ -122,97 +14,62 @@
       <h2 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Profil Pimpinan Desa</h2>
     </div>
 
-    {{-- Grid Kepala & Sekretaris --}}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      {{-- Card Kepala Desa --}}
-      <div class="kepala-card">
+      @foreach([['label' => 'Kepala Desa', 'periode' => '2021 – 2025'], ['label' => 'Sekretaris Desa', 'periode' => '2021 – 2025']] as $pimpinan)
+      <div class="relative overflow-hidden rounded-2xl p-6 text-white shadow-[0_12px_40px_rgba(13,43,94,0.30)]"
+           style="background: linear-gradient(145deg, #0D2B5E 0%, #1D4ED8 65%, #1a44b0 100%); animation: fadeUp 0.6s ease both;">
+
+        <div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-white/5 pointer-events-none"></div>
+
         <div class="flex items-start gap-4 mb-5">
-          <div class="flex flex-col items-center gap-1 flex-shrink-0">
-            <div class="kd-avatar">
-              <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="40" cy="28" rx="20" ry="22"/>
-                <path d="M0 90 Q0 54 40 54 Q80 54 80 90 Z"/>
-              </svg>
+
+          <div class="flex flex-col items-center gap-1.5 flex-shrink-0">
+            <div class="w-[120px] h-[120px] rounded-full border-[3px] border-white/30 overflow-hidden">
+                <img src="{{ asset('images/hero-3.jpg') }}"
+                    alt="Foto"
+                    class="w-full h-full object-cover object-top">
             </div>
-            <div class="kd-badge">2021 – 2025</div>
+            <span class="bg-amber-400 text-[#0D2B5E] text-[10px] font-bold px-2.5 py-0.5 rounded-full whitespace-nowrap">
+              {{ $pimpinan['periode'] }}
+            </span>
           </div>
+
+          {{-- Judul --}}
           <div class="flex-1">
-            <p class="text-[10px] font-bold tracking-[2px] text-amber-400 uppercase mb-1">Profil Kepala Desa</p>
-            <h3 class="text-sm font-bold leading-snug mb-1">Membangun Desa,<br>Bersama Warga</h3>
-            <div class="kd-divider"></div>
+            <p class="text-[17px] font-bold tracking-[2px] text-amber-400 uppercase mb-1">Profil {{ $pimpinan['label'] }}</p>
+            <h3 class="text-[25px] font-bold leading-snug mb-2">Membangun Desa,<br>Bersama Warga</h3>
+            <div class="w-12 h-[5px] bg-amber-400 rounded"></div>
           </div>
         </div>
 
+        {{-- Nama --}}
         <p class="text-xl font-bold tracking-tight mb-4">Nama Lengkap</p>
 
-        <div class="kd-table">
-          <div class="kd-row">
-            <span class="kd-lbl">Alamat</span>
-            <span class="kd-val">Desa Glagahwero, Kecamatan Kalisat</span>
+        {{-- Tabel info --}}
+        <div class="bg-white/10 rounded-xl px-3.5 mb-4">
+          @foreach([['lbl'=>'Alamat','val'=>'Desa Glagahwero, Kecamatan Kalisat'],['lbl'=>'Pendidikan','val'=>'S1 Sarjana Pendidikan'],['lbl'=>'TTL','val'=>'Desa Glagahwero, 01 – 01 – 19xx']] as $row)
+          <div class="flex items-start gap-2.5 py-2 border-b border-white/10 last:border-0 text-xs">
+            <span class="text-amber-400 font-semibold w-[72px] flex-shrink-0 text-[11.5px]">{{ $row['lbl'] }}</span>
+            <span class="text-white/80 leading-relaxed">{{ $row['val'] }}</span>
           </div>
-          <div class="kd-row">
-            <span class="kd-lbl">Pendidikan</span>
-            <span class="kd-val">S1 Sarjana Pendidikan</span>
-          </div>
-          <div class="kd-row">
-            <span class="kd-lbl">TTL</span>
-            <span class="kd-val">Desa Glagahwero, 01 – 01 – 19xx</span>
-          </div>
+          @endforeach
         </div>
 
+        {{-- Deskripsi --}}
         <p class="text-xs leading-relaxed text-white/70">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
         </p>
+
       </div>
-
-      {{-- Card Sekretaris Desa --}}
-      <div class="kepala-card">
-        <div class="flex items-start gap-4 mb-5">
-          <div class="flex flex-col items-center gap-1 flex-shrink-0">
-            <div class="kd-avatar">
-              <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="40" cy="28" rx="20" ry="22"/>
-                <path d="M0 90 Q0 54 40 54 Q80 54 80 90 Z"/>
-              </svg>
-            </div>
-            <div class="kd-badge">2021 – 2025</div>
-          </div>
-          <div class="flex-1">
-            <p class="text-[10px] font-bold tracking-[2px] text-amber-400 uppercase mb-1">Profil Sekretaris Desa</p>
-            <h3 class="text-sm font-bold leading-snug mb-1">Membangun Desa,<br>Bersama Warga</h3>
-            <div class="kd-divider"></div>
-          </div>
-        </div>
-
-        <p class="text-xl font-bold tracking-tight mb-4">Nama Lengkap</p>
-
-        <div class="kd-table">
-          <div class="kd-row">
-            <span class="kd-lbl">Alamat</span>
-            <span class="kd-val">Desa Glagahwero, Kecamatan Kalisat</span>
-          </div>
-          <div class="kd-row">
-            <span class="kd-lbl">Pendidikan</span>
-            <span class="kd-val">S1 Sarjana Pendidikan</span>
-          </div>
-          <div class="kd-row">
-            <span class="kd-lbl">TTL</span>
-            <span class="kd-val">Desa Glagahwero, 01 – 01 – 19xx</span>
-          </div>
-        </div>
-
-        <p class="text-xs leading-relaxed text-white/70">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
+      @endforeach
 
     </div>
   </div>
 </section>
 
 <!-- ===== 2. PERANGKAT DESA ===== -->
-<section class="py-12 px-6 bg-white">
+<section class="py-12 px-4 sm:px-6 bg-white">
   <div class="max-w-6xl mx-auto">
 
     {{-- Section Header --}}
@@ -221,13 +78,10 @@
         <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
         <h2 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Perangkat Desa</h2>
       </div>
-      <button class="bg-[#C0392B] hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded transition">
-        Lihat Selengkapnya
-      </button>
     </div>
 
-    {{-- Grid Perangkat --}}
-    <div class="grid grid-cols-4 gap-4">
+    {{-- Grid: 2 col mobile → 3 tablet → 4 desktop --}}
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
 
       @php
         $perangkat = [
@@ -242,22 +96,25 @@
         ];
       @endphp
 
-      @foreach($perangkat as $p)
-      <div class="pcard">
-        <div class="pcard-photo">
+      @foreach($perangkat as $index => $p)
+      <div class="bg-white rounded-xl overflow-hidden shadow-[0_2px_12px_rgba(13,43,94,0.10)] hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(13,43,94,0.16)] transition-all duration-200"
+           style="animation: fadeUp 0.5s ease {{ $index * 0.05 }}s both">
+
+        {{-- Foto --}}
+        <div class="w-full aspect-square bg-gradient-to-b from-[#cdd9f0] to-[#b8c9e2] flex items-end justify-center overflow-hidden">
           @if($p['foto'])
-            <img src="{{ asset('storage/' . $p['foto']) }}" alt="{{ $p['nama'] }}">
+            <div class="w-full aspect-square bg-gradient-to-b from-[#cdd9f0] to-[#b8c9e2] flex items-end justify-center overflow-hidden">
           @else
-            <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="60" cy="60" rx="32" ry="36"/>
-              <path d="M0 150 Q0 100 60 100 Q120 100 120 150Z"/>
-            </svg>
+            <img src="{{ asset('images/hero-1.jpg') }}" alt="{{ $p['nama'] }}" class="w-full h-full object-cover object-top">
           @endif
         </div>
-        <div class="p-3 bg-[#0D2B5E] text-white text-center">
-          <p class="text-sm font-semibold">{{ $p['nama'] }}</p>
-          <p class="text-xs text-blue-200">{{ $p['jabatan'] }}</p>
+
+        {{-- Info --}}
+        <div class="p-2 sm:p-3 bg-[#0D2B5E] text-white text-center">
+          <p class="text-xs sm:text-sm font-semibold truncate">{{ $p['nama'] }}</p>
+          <p class="text-[10px] sm:text-xs text-blue-200 truncate">{{ $p['jabatan'] }}</p>
         </div>
+
       </div>
       @endforeach
 
@@ -265,3 +122,12 @@
 
   </div>
 </section>
+
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+@endsection

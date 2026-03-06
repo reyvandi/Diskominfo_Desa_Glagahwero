@@ -9,7 +9,7 @@
          SIDEBAR NAVIGASI KIRI
     ============================== --}}
     <aside class="lg:w-64 flex-shrink-0">
-      <div class="sticky top-24 flex flex-col gap-3">
+      <div class="sticky top-4 lg:top-6 flex flex-col gap-3 bg-[#F4F8FD] p-4 rounded-xl shadow-sm overflow-visible">
 
         <a href="#visi-misi"
            class="flex items-center gap-3 px-5 py-4 rounded-xl text-white font-semibold text-sm shadow-md transition-all hover:brightness-110 active-nav"
@@ -264,7 +264,7 @@
         const isActive = link.getAttribute('href') === '#' + id;
 
         if (isActive) {
-          link.style.transform = 'scale(1.07)';
+          link.style.transform = 'translateX(8px)';
           link.style.boxShadow = '0 8px 24px rgba(27,47,94,0.5)';
           link.style.opacity = '1';
           link.style.zIndex = '10';

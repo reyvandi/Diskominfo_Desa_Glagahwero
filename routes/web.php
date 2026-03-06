@@ -32,6 +32,10 @@ Route::get('/produk-desa', function () {
     return view('pages.produk_desa');
 })->name('produk');
 
+Route::get('/aparatur-desa', function () {
+    return view('pages.aparatur');
+})->name('aparatur');
+
 Route::get('/ppid', function () {
     return view('pages.ppid'); // buat file ppid.blade.php kalau belum ada
 })->name('ppid');
