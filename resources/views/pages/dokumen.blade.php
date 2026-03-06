@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
-@section('pages.beranda')
-    <livewire:dokumen />
+@section('content')
+    @livewire('dokumen')
 @endsection
