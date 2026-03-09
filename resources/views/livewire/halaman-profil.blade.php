@@ -80,7 +80,7 @@
                                 <span class="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background: #1B2F5E">
                                     {{ $no + 1 }}
                                 </span>
-                                <p class="text-gray-600 text-sm leading-relaxed">{{ $isi }}</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">{{ $isi['item'] }}</p>
                             </div>
                             @endforeach
                         </div>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="bg-white rounded-b-2xl shadow-sm p-8">
                         <div class="rounded-xl p-8 text-white text-sm leading-relaxed text-justify" style="background: linear-gradient(135deg, #1B2F5E, #2a4a8a)">
-                            {!! nl2br(e($profil->sejarah)) !!}
+                            {!! $profil->sejarah !!}
                         </div>
                     </div>
                 </div>
