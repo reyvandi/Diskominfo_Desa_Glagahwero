@@ -26,6 +26,15 @@ class ProdukDesaForm
                         'makanan' => 'Makanan Khas',
                         'adat'    => 'Adat Istiadat',
                     ]),
+                TextInput::make('lokasi')
+                ->label('Link Lokasi (Google Maps)')
+                ->placeholder('https://maps.google.com/?q=...')
+                ->nullable()
+                ->columnSpanFull(),
+                TextInput::make('whatsapp')
+                ->label('Nomor WhatsApp')
+                ->placeholder('6281234567890')
+                ->nullable(),
                 TextInput::make('sub_kategori'),
                 Textarea::make('deskripsi')
                     ->columnSpanFull(),

@@ -14,6 +14,8 @@ class ProdukDesa extends Model
         'deskripsi',
         'foto',
         'urutan',
+        'whatsapp',
+        'lokasi',   
         'is_active',
     ];
 
