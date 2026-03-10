@@ -11,7 +11,6 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Widgets\AccountWidget;
-use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -28,18 +27,24 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Desa Glagahwero')
+            ->favicon(asset('images/logo.png'))
             ->colors([
-                'primary' => Color::hex('#102778'),
+                'primary' => Color::Blue,
             ])
-            ->discoverResources(in: app_path('Filament/admin/Resources'), for: 'App\Filament\admin\Resources')
-            ->discoverPages(in: app_path('Filament/admin/Pages'), for: 'App\Filament\admin\Pages')
+            ->sidebarCollapsibleOnDesktop()
+            ->navigationGroups([
+                'Konten Desa',
+                'Pengaturan',
+            ])
+            ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\Filament\Admin\Resources')
+            ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\Filament\Admin\Pages')
             ->pages([
                 Dashboard::class,
             ])
-            ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
+            ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\Filament\Admin\Widgets')
             ->widgets([
                 AccountWidget::class,
-                FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

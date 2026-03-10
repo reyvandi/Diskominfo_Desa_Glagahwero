@@ -8,53 +8,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
-  body { font-family: 'Poppins', sans-serif; }
-  .font-dancing { font-family: 'Dancing Script', cursive; }
+    body { font-family: 'Poppins', sans-serif; }
+    .font-dancing { font-family: 'Dancing Script', cursive; }
 
-  /* Swiper hero */
-  .swiper { width: 100%; height: 420px; }
-  .swiper-slide { position: relative; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
-
-  /* Swiper aparat */
-  @keyframes scrollAparat {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-scroll-aparat {
-    animation: scrollAparat 150s linear infinite;
-  }
-  .animate-scroll-aparat:hover {
-    animation-play-state: paused;
-  }
-
-  /* Scrollbar sambutan */
-  .sambutan-scroll::-webkit-scrollbar { width: 6px; }
-  .sambutan-scroll::-webkit-scrollbar-track { background: #e5e7eb; border-radius: 4px; }
-  .sambutan-scroll::-webkit-scrollbar-thumb { background: #1D4ED8; border-radius: 4px; }
-  .sambutan-scroll::-webkit-scrollbar-thumb:hover { background: #1a5bc0; }
-
-  /* Tab content toggle */
-  .tab-content { display: none; }
-  .tab-content.active { display: grid; }
-
-  /* Mobile: hero lebih pendek */
-  @media (max-width: 640px) {
-    .swiper { height: 240px; }
-    .font-dancing { font-size: 3rem !important; }
-  }
-
-  /* Mobile: tab nav scroll horizontal */
-  @media (max-width: 768px) {
-    .tab-nav-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+    .animate-scroll-aparat {
+        animation: scrollAparat 150s linear infinite;
+        animation-play-state: paused;
     }
-    .tab-nav-wrap::-webkit-scrollbar { display: none; }
-    .tab-nav-inner {
-      min-width: max-content;
+    .animate-scroll-aparat.playing {
+        animation-play-state: running;
     }
-  }
+
+    /* Swiper hero */
+    .swiper { width: 100%; height: 420px; }
+    .swiper-slide { position: relative; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
+
+    /* Swiper aparat */
+    @keyframes scrollAparat {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-scroll-aparat {
+        animation: scrollAparat 150s linear infinite;
+    }
+    .animate-scroll-aparat:hover {
+        animation-play-state: paused;
+    }
+
+    /* Scrollbar sambutan */
+    .sambutan-scroll::-webkit-scrollbar { width: 6px; }
+    .sambutan-scroll::-webkit-scrollbar-track { background: #e5e7eb; border-radius: 4px; }
+    .sambutan-scroll::-webkit-scrollbar-thumb { background: #1D4ED8; border-radius: 4px; }
+    .sambutan-scroll::-webkit-scrollbar-thumb:hover { background: #1a5bc0; }
+
+    /* Tab content toggle */
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; }
+
+    /* Mobile: hero lebih pendek */
+    @media (max-width: 640px) {
+        .swiper { height: 240px; }
+        .font-dancing { font-size: 3rem !important; }
+    }
+
+    /* Mobile: tab nav scroll horizontal */
+    @media (max-width: 768px) {
+        .tab-nav-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        }
+        .tab-nav-wrap::-webkit-scrollbar { display: none; }
+        .tab-nav-inner {
+        min-width: max-content;
+        }
+    }
 </style>
 
 <!-- ===== 1. HERO SLIDER ===== -->
@@ -155,7 +163,7 @@
   </div>
 </section>
 
-<section class="py-14 pb-6 px-4 sm:px-6 bg-[#F4F8FD]">
+<section id="section-aparatur" class="py-14 pb-6 px-4 sm:px-6 bg-[#F4F8FD]">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
 
@@ -176,19 +184,47 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
 <script>
 
-  const tabIds = ['umkm', 'wisata', 'pakaian', 'Makanan', 'adat'];
-  function switchTab(id, btn) {
-    tabIds.forEach(t => document.getElementById('tab-' + t).classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => {
-      b.classList.remove('bg-[#1D4ED8]', 'text-white');
-      b.classList.add('bg-transparent', 'text-gray-700');
-    });
-    document.getElementById('tab-' + id).classList.add('active');
-    btn.classList.remove('bg-transparent', 'text-gray-700');
-    btn.classList.add('bg-[#1D4ED8]', 'text-white');
-  }
+    // ===== HERO SWIPER =====
+        const swiper = new Swiper(".mySwiper", {
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+            speed: 800,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+
+    const tabIds = ['umkm', 'wisata', 'pakaian', 'Makanan', 'adat'];
+        function switchTab(id, btn) {
+        tabIds.forEach(t => document.getElementById('tab-' + t).classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('bg-[#1D4ED8]', 'text-white');
+            b.classList.add('bg-transparent', 'text-gray-700');
+        });
+        document.getElementById('tab-' + id).classList.add('active');
+        btn.classList.remove('bg-transparent', 'text-gray-700');
+        btn.classList.add('bg-[#1D4ED8]', 'text-white');
+    }
+
+
+
 </script>
 
 @endsection

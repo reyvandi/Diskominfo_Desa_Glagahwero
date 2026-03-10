@@ -19,13 +19,10 @@ class ProdukDesasTable
                     ->searchable(),
                 TextColumn::make('kategori')
                     ->searchable(),
-                TextColumn::make('sub_kategori')
+                TextColumn::make('pemilik')
                     ->searchable(),
                 TextColumn::make('foto')
                     ->searchable(),
-                TextColumn::make('urutan')
-                    ->numeric()
-                    ->sortable(),
                 IconColumn::make('is_active')
                     ->boolean(),
                 TextColumn::make('created_at')

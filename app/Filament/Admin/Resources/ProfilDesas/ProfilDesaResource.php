@@ -18,9 +18,16 @@ class ProfilDesaResource extends Resource
 {
     protected static ?string $model = ProfilDesa::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingLibrary;
 
     protected static ?string $recordTitleAttribute = 'visi';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Konten Desa';
+    }
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {

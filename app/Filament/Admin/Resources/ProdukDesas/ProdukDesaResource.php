@@ -18,9 +18,16 @@ class ProdukDesaResource extends Resource
 {
     protected static ?string $model = ProdukDesa::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShoppingBag;
 
-    protected static ?string $recordTitleAttribute = 'admin';
+    protected static ?string $recordTitleAttribute = 'nama';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Konten Desa';
+    }
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {

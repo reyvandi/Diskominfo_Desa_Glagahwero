@@ -18,9 +18,16 @@ class DokumenResource extends Resource
 {
     protected static ?string $model = Dokumen::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
 
     protected static ?string $recordTitleAttribute = 'judul';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Konten Desa';
+    }
+
+    protected static ?int $navigationSort = 3;
 
     public static function form(Schema $schema): Schema
     {

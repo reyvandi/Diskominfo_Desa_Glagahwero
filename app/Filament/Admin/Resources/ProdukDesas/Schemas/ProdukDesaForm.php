@@ -26,26 +26,22 @@ class ProdukDesaForm
                         'makanan' => 'Makanan Khas',
                         'adat'    => 'Adat Istiadat',
                     ]),
-                TextInput::make('lokasi')
-                ->label('Link Lokasi (Google Maps)')
-                ->placeholder('https://maps.google.com/?q=...')
-                ->nullable()
-                ->columnSpanFull(),
+                TextInput::make('pemilik')
+                    ->label('Nama Toko/Pemilik')
+                    ->placeholder('Contoh: Toko Bu Sari'),
                 TextInput::make('whatsapp')
-                ->label('Nomor WhatsApp')
-                ->placeholder('6281234567890')
-                ->nullable(),
-                TextInput::make('sub_kategori'),
+                    ->label('Nomor WhatsApp')
+                    ->placeholder('6281234567890'),
+                TextInput::make('lokasi')
+                    ->label('Link Lokasi (Google Maps)')
+                    ->placeholder('https://maps.google.com/?q=...')
+                    ->columnSpanFull(),
                 Textarea::make('deskripsi')
                     ->columnSpanFull(),
                 FileUpload::make('foto')
                     ->image()
                     ->directory('produk-desa')
                     ->disk('public'),
-                TextInput::make('urutan')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
                 Toggle::make('is_active')
                     ->required(),
             ]);

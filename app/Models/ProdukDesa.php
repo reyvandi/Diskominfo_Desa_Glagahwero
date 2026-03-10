@@ -10,12 +10,12 @@ class ProdukDesa extends Model
     protected $fillable = [
         'nama',
         'kategori',
-        'sub_kategori',
+        'pemilik',
         'deskripsi',
         'foto',
         'urutan',
         'whatsapp',
-        'lokasi',   
+        'lokasi',
         'is_active',
     ];
 

@@ -24,7 +24,7 @@
                 {{ $item->kategori }}
             </span>
             <div class="px-2.5 pt-2 pb-2.5 bg-white">
-                <p class="text-xs text-gray-400">{{ $item->sub_kategori ?? $item->kategori }}</p>
+                <p class="text-xs text-gray-400">{{ $item->pemilik ?? $item->kategori }}</p>
                 <p class="text-xs font-semibold text-[#1D4ED8]">{{ $item->nama }}</p>
             </div>
         </div>

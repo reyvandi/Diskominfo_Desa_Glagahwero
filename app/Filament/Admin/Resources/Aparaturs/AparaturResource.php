@@ -18,9 +18,16 @@ class AparaturResource extends Resource
 {
     protected static ?string $model = Aparatur::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
 
-    protected static ?string $recordTitleAttribute = 'admin';
+    protected static ?string $recordTitleAttribute = 'nama';
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Konten Desa';
+    }
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {
