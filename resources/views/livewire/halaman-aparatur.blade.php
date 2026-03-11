@@ -2,7 +2,7 @@
 
     <!-- ===== PROFIL PIMPINAN DESA ===== -->
     <section class="py-12 px-4 sm:px-6 bg-[#F4F8FD]">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-7xl mx-auto">
 
             <div class="flex items-center gap-3 mb-6">
                 <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
@@ -69,7 +69,7 @@
 
     <!-- ===== PERANGKAT DESA ===== -->
     <section class="py-12 px-4 sm:px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-7xl mx-auto">
 
             <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center gap-3">

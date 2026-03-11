@@ -1,5 +1,5 @@
 <section class="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-7xl mx-auto">
 
     {{-- Stats Cards --}}
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

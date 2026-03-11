@@ -36,6 +36,10 @@ Route::get('/aparatur-desa', function () {
     return view('pages.aparatur');
 })->name('aparatur');
 
+Route::get('/pilihan-design-aparatur', function () {
+    return view('pages.pilihan_design_aparatur');
+})->name('pilihan-design-aparatur');
+
 Route::get('/ppid', function () {
     return view('pages.ppid'); // buat file ppid.blade.php kalau belum ada
 })->name('ppid');

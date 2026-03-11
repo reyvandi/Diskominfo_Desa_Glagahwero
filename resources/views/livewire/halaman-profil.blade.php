@@ -1,10 +1,10 @@
 <div>
     <section class="bg-gray-100 min-h-screen py-10 px-4 md:px-8 font-sans">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
 
             {{-- SIDEBAR --}}
             <aside class="lg:w-64 flex-shrink-0">
-                <div class="sticky top-4 lg:top-6 flex flex-col gap-3 bg-[#F4F8FD] p-4 rounded-xl shadow-sm">
+                <div class="sticky top-4 lg:top-6 flex flex-col gap-8 bg-[#F4F8FD] p-4 rounded-xl shadow-sm">
 
                     <a href="#visi-misi" class="flex items-center gap-3 px-5 py-4 rounded-xl text-white font-semibold text-sm shadow-md transition-all hover:brightness-110" style="background: #102778">
                         <span class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:rgba(255,255,255,0.15)">
@@ -165,8 +165,8 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) setActive(entry.target.id);
                 });
-            }, { threshold: 0.3, rootMargin: '-80px 0px -60% 0px' });
-
+            }, { threshold: 0.1, rootMargin: '-80px 0px -30% 0px' });
+            
             sections.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) observer.observe(el);

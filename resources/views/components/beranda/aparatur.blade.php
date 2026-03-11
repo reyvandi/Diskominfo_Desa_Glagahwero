@@ -73,7 +73,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">01</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=11" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Budi Santoso, S.E.</p>
@@ -84,7 +84,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">02</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=15" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Siti Rahayu, S.Pd.</p>
@@ -95,7 +95,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">03</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=20" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Ahmad Fauzi</p>
@@ -106,7 +106,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">04</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=25" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Dewi Lestari, A.Md.</p>
@@ -117,7 +117,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">05</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=30" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Rudi Hermawan</p>
@@ -128,7 +128,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">06</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=35" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Nurul Hidayah</p>
@@ -139,7 +139,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">07</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=40" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Hendra Wijaya</p>
@@ -150,7 +150,7 @@
           <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)">
             <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div>
             <span class="absolute top-2.5 left-2.5 z-20 text-[9px] font-mono font-semibold text-white/40 bg-white/5 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-sm leading-none">08</span>
-            <img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
+            <img src="https://i.pravatar.cc/400?img=45" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/>
             <div class="relative bg-navy px-4 py-3 border-t border-blue-800/50">
               <div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div>
               <p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Yuli Astuti, S.Sos.</p>
@@ -159,14 +159,14 @@
           </div>
 
           <!-- duplicates (seamless loop) -->
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Budi Santoso, S.E.</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Desa</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Siti Rahayu, S.Pd.</p><p class="text-[11px] text-blue-200 mt-0.5">Sekretaris Desa</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Ahmad Fauzi</p><p class="text-[11px] text-blue-200 mt-0.5">Kasi Pemerintahan</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Dewi Lestari, A.Md.</p><p class="text-[11px] text-blue-200 mt-0.5">Kaur Keuangan</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Rudi Hermawan</p><p class="text-[11px] text-blue-200 mt-0.5">Kaur Umum & Perencanaan</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Nurul Hidayah</p><p class="text-[11px] text-blue-200 mt-0.5">Kasi Kesejahteraan</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Hendra Wijaya</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Dusun I</p></div></div>
-          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="images/aparatur-foto.jpg" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Yuli Astuti, S.Sos.</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Dusun II</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=11" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Budi Santoso, S.E.</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Desa</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=15" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Siti Rahayu, S.Pd.</p><p class="text-[11px] text-blue-200 mt-0.5">Sekretaris Desa</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=20" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Ahmad Fauzi</p><p class="text-[11px] text-blue-200 mt-0.5">Kasi Pemerintahan</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=25" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Dewi Lestari, A.Md.</p><p class="text-[11px] text-blue-200 mt-0.5">Kaur Keuangan</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=30" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Rudi Hermawan</p><p class="text-[11px] text-blue-200 mt-0.5">Kaur Umum & Perencanaan</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=35" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Nurul Hidayah</p><p class="text-[11px] text-blue-200 mt-0.5">Kasi Kesejahteraan</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=40" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Hendra Wijaya</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Dusun I</p></div></div>
+          <div class="d1c group relative shrink-0 w-52 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 [transform-style:preserve-3d]" onmousemove="d1Tilt(event,this)" onmouseleave="d1Reset(this)"><div class="absolute inset-0 z-10 pointer-events-none overflow-hidden rounded-2xl"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div></div><img src="https://i.pravatar.cc/400?img=45" alt="" class="w-full h-[200px] object-cover object-top saturate-50 brightness-90 group-hover:saturate-100 group-hover:brightness-100 transition-all duration-500"/><div class="relative bg-navy px-4 py-3 border-t border-blue-800/50"><div class="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-blue-200/50 to-transparent"></div><p class="text-[13px] font-semibold text-white translate-y-2 opacity-70 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">Yuli Astuti, S.Sos.</p><p class="text-[11px] text-blue-200 mt-0.5">Kepala Dusun II</p></div></div>
 
         </div>
       </div>
@@ -191,7 +191,7 @@
         <div id="spotTrack" class="flex items-center gap-3 w-max transition-transform duration-500 ease-[cubic-bezier(.77,0,.175,1)] px-16">
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="0">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=11" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Budi Santoso, S.E.</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kepala Desa</p>
@@ -199,7 +199,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="1">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=15" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Siti Rahayu, S.Pd.</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Sekretaris Desa</p>
@@ -207,7 +207,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="2">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=20" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Ahmad Fauzi</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kasi Pemerintahan</p>
@@ -215,7 +215,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="3">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=25" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Dewi Lestari, A.Md.</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kaur Keuangan</p>
@@ -223,7 +223,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="4">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=30" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Rudi Hermawan</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kaur Umum & Perencanaan</p>
@@ -231,7 +231,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="5">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=35" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Nurul Hidayah</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kasi Kesejahteraan</p>
@@ -239,7 +239,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="6">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=40" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Hendra Wijaya</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kepala Dusun I</p>
@@ -247,7 +247,7 @@
           </div>
 
           <div class="si group relative shrink-0 w-48 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(.77,0,.175,1)] brightness-[.4] saturate-[.25] opacity-60 scale-90" data-si="7">
-            <img src="images/aparatur-foto.jpg" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
+            <img src="https://i.pravatar.cc/500?img=45" alt="" class="si-img w-full h-52 object-cover object-top block transition-[height] duration-500"/>
             <div class="si-bar bg-navy px-4 py-3 border-t-2 border-transparent transition-all duration-500">
               <p class="si-name text-[13px] font-semibold text-white opacity-0 -translate-y-1 transition-all duration-300 delay-100 truncate">Yuli Astuti, S.Sos.</p>
               <p class="si-jab text-[11px] text-blue-200 mt-0.5 opacity-0 transition-opacity duration-300 delay-150 truncate">Kepala Dusun II</p>
@@ -291,7 +291,7 @@
         <div class="group relative col-span-5 row-span-2 rounded-2xl overflow-hidden cursor-default min-h-[380px] ring-t-[3px] ring-blue-500">
           <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-blue-300 to-transparent z-10"></div>
           <span class="absolute top-3 left-3 z-10 text-[9px] font-bold tracking-[.12em] uppercase text-blue-200 bg-navy/75 border border-blue-200/30 rounded-full px-2.5 py-1 backdrop-blur-sm">Kepala Desa</span>
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/600?img=11" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Kepala Desa</p>
@@ -301,7 +301,7 @@
 
         <!-- 1 tall medium -->
         <div class="group relative col-span-4 row-span-2 rounded-2xl overflow-hidden cursor-default min-h-[380px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/600?img=15" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Sekretaris Desa</p>
@@ -311,7 +311,7 @@
 
         <!-- 2 small -->
         <div class="group relative col-span-3 rounded-2xl overflow-hidden cursor-default min-h-[185px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/400?img=20" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-3">
             <p class="text-[8px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-0.5">Kasi Pemerintahan</p>
@@ -321,7 +321,7 @@
 
         <!-- 3 small -->
         <div class="group relative col-span-3 rounded-2xl overflow-hidden cursor-default min-h-[185px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/400?img=25" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-3">
             <p class="text-[8px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-0.5">Kaur Keuangan</p>
@@ -331,7 +331,7 @@
 
         <!-- 4 half -->
         <div class="group relative col-span-6 rounded-2xl overflow-hidden cursor-default min-h-[205px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/600?img=30" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Kaur Umum & Perencanaan</p>
@@ -341,7 +341,7 @@
 
         <!-- 5 half -->
         <div class="group relative col-span-6 rounded-2xl overflow-hidden cursor-default min-h-[205px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/600?img=35" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Kasi Kesejahteraan</p>
@@ -351,7 +351,7 @@
 
         <!-- 6 medium -->
         <div class="group relative col-span-4 rounded-2xl overflow-hidden cursor-default min-h-[220px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/600?img=40" alt="" class="absolute inset-0 w-full h-full object-cover object-top saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Kepala Dusun I</p>
@@ -361,7 +361,7 @@
 
         <!-- 7 cinematic wide -->
         <div class="group relative col-span-8 rounded-2xl overflow-hidden cursor-default min-h-[220px]">
-          <img src="images/aparatur-foto.jpg" alt="" class="absolute inset-0 w-full h-full object-cover [object-position:center_20%] saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
+          <img src="https://i.pravatar.cc/800?img=45" alt="" class="absolute inset-0 w-full h-full object-cover [object-position:center_20%] saturate-[.6] brightness-[.8] group-hover:scale-[1.07] group-hover:saturate-100 group-hover:brightness-[.95] transition-all duration-[600ms]"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#07101f]/95 via-[#07101f]/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4">
             <p class="text-[9px] tracking-[.13em] uppercase font-semibold text-blue-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[50ms] mb-1">Kepala Dusun II</p>
