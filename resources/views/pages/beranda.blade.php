@@ -26,7 +26,7 @@
     .sambutan-scroll::-webkit-scrollbar { width: 6px; }
     .sambutan-scroll::-webkit-scrollbar-track { background: #e5e7eb; border-radius: 4px; }
     .sambutan-scroll::-webkit-scrollbar-thumb { background: #1D4ED8; border-radius: 4px; }
-    .sambutan-scroll::-webkit-scrollbar-thumb:hover { background: #1a5bc0; }
+    .sambutan-scroll::-webkit-scrollbar-thumb:hover { background: #1D4ED8; }
     @media (max-width: 640px) {
         .swiper { height: 240px; }
         .font-dancing { font-size: 3rem !important; }
@@ -115,9 +115,9 @@
 </section>
 
 <!-- ===== 4. APARATUR ===== -->
-<section id="section-aparatur" class="py-14 pb-6 bg-[#F4F8FD]">
+<section id="section-aparatur" class="py-14 pb-6 bg-[#0D2B5E]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#ffffff] mb-10">Aparat Pemerintah Desa</h2>
         <livewire:aparaturd-desa />
         <div class="flex justify-center mt-8">
             <a href="{{ route('aparatur') }}" class="bg-[#C0392B] hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition text-sm">

@@ -57,7 +57,7 @@
                         Visi
                     </div>
                     <div class="bg-white rounded-b-2xl shadow-sm p-8">
-                        <div class="border-l-4 pl-6 py-2" style="border-color: #9ACD00">
+                        <div class="border-l-4 pl-6 py-2" style="border-color: #0D2B5E">
                             <p class="text-gray-700 text-base md:text-lg font-medium leading-relaxed text-justify italic">
                                 "{{ $profil->visi }}"
                             </p>
@@ -113,7 +113,7 @@
                     <div class="bg-white rounded-b-2xl shadow-sm p-6">
                         <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
                             <div class="flex items-center gap-2">
-                                <div class="w-1 h-5 rounded-full" style="background:#9ACD00"></div>
+                                <div class="w-1 h-5 rounded-full" style="background:#0D2B5E"></div>
                                 <span class="text-sm font-semibold text-gray-700">Struktur Organisasi Pemerintahan Desa</span>
                             </div>
                             <span class="px-3 py-1 rounded-full text-white text-xs font-bold" style="background:#1636A4">
@@ -166,7 +166,7 @@
                     if (entry.isIntersecting) setActive(entry.target.id);
                 });
             }, { threshold: 0.1, rootMargin: '-80px 0px -30% 0px' });
-            
+
             sections.forEach(id => {
                 const el = document.getElementById(id);
                 if (el) observer.observe(el);
