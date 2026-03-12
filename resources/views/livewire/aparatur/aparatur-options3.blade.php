@@ -16,7 +16,7 @@
   {{-- ════════════════════════════
        DESIGN 3 — BENTO MOSAIC
   ════════════════════════════ --}}
-  <div id="d3" class="tab-panel hidden" style="font-family:'Plus Jakarta Sans',sans-serif;">
+  <div id="d3" class="tab-panel" style="font-family:'Plus Jakarta Sans',sans-serif;">
     <div class="py-10 px-5" style="background:#F4F8FD;">
       <div class="grid grid-cols-12 gap-2 max-w-4xl mx-auto">
 

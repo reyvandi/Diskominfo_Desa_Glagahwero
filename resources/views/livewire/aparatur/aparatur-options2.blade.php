@@ -16,7 +16,7 @@
   {{-- ════════════════════════════
        DESIGN 2 — SPOTLIGHT
   ════════════════════════════ --}}
-  <div id="d2" class="tab-panel hidden" style="font-family:'Manrope',sans-serif;">
+  <div id="d2" class="tab-panel" style="font-family:'Manrope',sans-serif;">
     <div class="relative py-10 overflow-hidden select-none" id="spotWrap" style="background:#F4F8FD;">
 
       <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-28 z-10" style="background:linear-gradient(to right,#F4F8FD,transparent);"></div>

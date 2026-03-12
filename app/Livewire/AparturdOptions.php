@@ -3,11 +3,16 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Aparatur;
 
 class AparturdOptions extends Component
 {
     public function render()
     {
-        return view('livewire.aparatur-options2');
+        $aparatur = Aparatur::active()
+            ->orderBy('urutan')
+            ->get();
+
+        return view('livewire.aparatur.aparatur-options2');
     }
 }
