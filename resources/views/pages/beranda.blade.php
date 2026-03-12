@@ -49,6 +49,7 @@
     <div class="swiper-pagination"></div>
 </div>
 
+
 <!-- ===== 2. BERITA DESA ===== -->
 <section class="py-12 bg-[#F4F8FD]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -116,7 +117,7 @@
 
 <!-- ===== 4. APARATUR ===== -->
 <section id="section-aparatur" class="py-14 pb-6 px-4 sm:px-6 bg-[#F4F8FD]">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
         <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
 
         <livewire:aparatur-options2 />
@@ -128,6 +129,8 @@
         </div>
     </div>
 </section>
+
+
 
 <!-- ===== 5. PRODUK DESA ===== -->
 <section class="py-12 bg-white">

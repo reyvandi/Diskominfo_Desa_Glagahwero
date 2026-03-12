@@ -47,3 +47,7 @@ Route::get('/ppid', function () {
 // Route::get('/profil', function () {
 //     return view('pages.profil');   // slot diisi profil
 // });
+
+Route::get('/heroslider', function () {
+    return view('pages.heroslider');
+});
