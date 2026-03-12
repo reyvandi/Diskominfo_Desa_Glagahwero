@@ -36,9 +36,6 @@ Route::get('/aparatur-desa', function () {
     return view('pages.aparatur');
 })->name('aparatur');
 
-Route::get('/pilihan-design-aparatur', function () {
-    return view('pages.pilihan_design_aparatur');
-})->name('pilihan-design-aparatur');
 
 Route::get('/ppid', function () {
     return view('pages.ppid'); // buat file ppid.blade.php kalau belum ada
@@ -48,6 +45,6 @@ Route::get('/ppid', function () {
 //     return view('pages.profil');   // slot diisi profil
 // });
 
-Route::get('/heroslider', function () {
-    return view('pages.heroslider');
+Route::get('/design-previewer', function () {
+    return view('pages.design_previewer'); // pakai underscore
 });

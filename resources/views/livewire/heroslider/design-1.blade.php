@@ -1,288 +1,201 @@
 {{-- ============================================================
-     HERO SLIDER — DESIGN 1
-     Tema     : Cinematic Dark Luxury
-     Ciri     : Overlay diagonal gelap, tipografi besar serif,
-                aksen emas, counter animasi, gradient hitam bawah
-     Library  : Swiper 12 · Tailwind CDN
+     HERO SLIDER — DESIGN 1 (v3 — ANIMASI PAKAI JS, BUKAN CSS)
+     Teks dijamin muncul karena tidak bergantung pada
+     .swiper-slide-active CSS selector yang sering konflik
      ============================================================ --}}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-    /* ── Base ── */
-    .d1-hero { position: relative; width: 100%; height: 100vh; min-height: 560px; overflow: hidden; font-family: 'Jost', sans-serif; }
+    .d1-hero { font-family: 'Jost', sans-serif; position: relative; width: 100%; overflow: hidden; }
+    .d1-swiper { width: 100% !important; height: 600px !important; }
+    .d1-swiper .swiper-wrapper { height: 100% !important; }
+    .d1-swiper .swiper-slide { height: 100% !important; display: block !important; position: relative !important; overflow: hidden; }
 
-    /* Swiper fill */
-    .d1-hero .swiper,
-    .d1-hero .swiper-wrapper,
-    .d1-hero .swiper-slide { width: 100%; height: 100%; }
+    /* Zoom bg */
+    .d1-slide-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1.06); transition: transform 6s ease; }
+    .d1-swiper .swiper-slide-active .d1-slide-bg { transform: scale(1); }
 
-    /* Each slide: background image */
-    .d1-hero .swiper-slide { position: relative; overflow: hidden; }
-    .d1-hero .slide-bg {
-        position: absolute; inset: 0;
-        background-size: cover; background-position: center;
-        transform: scale(1.08);
-        transition: transform 6s ease;
-    }
-    .d1-hero .swiper-slide-active .slide-bg { transform: scale(1); }
+    /* Font */
+    .font-playfair { font-family: 'Playfair Display', serif; }
 
-    /* Diagonal dark overlay */
-    .d1-hero .slide-overlay {
-        position: absolute; inset: 0;
-        background: linear-gradient(115deg, rgba(5,5,10,0.85) 48%, rgba(5,5,10,0.25) 100%);
-        z-index: 1;
-    }
+    /* Teks — default VISIBLE, JS akan handle animasinya */
+    .d1-content-inner > * { opacity: 1; transform: translateY(0); }
 
-    /* Bottom gradient */
-    .d1-hero .slide-bottom {
-        position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
-        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-        z-index: 2;
-    }
+    /* Progress */
+    .d1-bar { height: 3px; background: #D4A843; width: 0; }
 
-    /* Content */
-    .d1-hero .slide-content {
-        position: absolute; inset: 0; z-index: 3;
-        display: flex; flex-direction: column;
-        justify-content: center; padding: 0 6% 0 8%;
-    }
-    .d1-slide-tag {
-        display: inline-flex; align-items: center; gap: 10px;
-        text-transform: uppercase; letter-spacing: 0.3em;
-        font-size: 0.7rem; color: #D4A843; font-weight: 500;
-        opacity: 0; transform: translateY(20px);
-        transition: opacity 0.7s 0.1s, transform 0.7s 0.1s;
-    }
-    .d1-slide-tag::before {
-        content: ''; display: inline-block;
-        width: 40px; height: 1px; background: #D4A843;
-    }
-    .d1-slide-title {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(3rem, 7vw, 7rem);
-        font-weight: 900; line-height: 1.0;
-        color: #ffffff;
-        opacity: 0; transform: translateY(30px);
-        transition: opacity 0.8s 0.3s, transform 0.8s 0.3s;
-    }
-    .d1-slide-title em { color: #D4A843; font-style: italic; }
-    .d1-slide-desc {
-        max-width: 480px; font-size: 0.95rem;
-        color: rgba(255,255,255,0.65); line-height: 1.7;
-        margin-top: 20px;
-        opacity: 0; transform: translateY(20px);
-        transition: opacity 0.7s 0.55s, transform 0.7s 0.55s;
-    }
-    .d1-slide-btn {
-        margin-top: 36px; display: inline-flex; align-items: center; gap: 12px;
-        background: transparent; border: 1px solid #D4A843;
-        color: #D4A843; padding: 14px 32px;
-        font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
-        cursor: pointer; text-decoration: none;
-        opacity: 0; transform: translateY(20px);
-        transition: opacity 0.7s 0.75s, transform 0.7s 0.75s, background 0.3s, color 0.3s;
-    }
-    .d1-slide-btn:hover { background: #D4A843; color: #050505; }
-    .d1-slide-btn svg { width: 16px; height: 16px; transition: transform 0.3s; }
-    .d1-slide-btn:hover svg { transform: translateX(4px); }
-
-    /* Active slide text reveal */
-    .d1-hero .swiper-slide-active .d1-slide-tag,
-    .d1-hero .swiper-slide-active .d1-slide-title,
-    .d1-hero .swiper-slide-active .d1-slide-desc,
-    .d1-hero .swiper-slide-active .d1-slide-btn {
-        opacity: 1; transform: translateY(0);
-    }
-
-    /* ── Side navigation ── */
-    .d1-nav {
-        position: absolute; right: 48px; top: 50%; z-index: 10;
-        transform: translateY(-50%);
-        display: flex; flex-direction: column; gap: 14px;
-    }
-    .d1-nav-btn {
-        width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.3);
-        background: rgba(255,255,255,0.05); backdrop-filter: blur(6px);
-        display: flex; align-items: center; justify-content: center;
-        cursor: pointer; transition: border-color 0.3s, background 0.3s;
-        color: white;
-    }
-    .d1-nav-btn:hover { border-color: #D4A843; background: rgba(212,168,67,0.15); }
-
-    /* ── Slide counter ── */
-    .d1-counter {
-        position: absolute; bottom: 44px; right: 56px; z-index: 10;
-        font-family: 'Playfair Display', serif;
-        display: flex; align-items: flex-end; gap: 4px;
-        color: rgba(255,255,255,0.4);
-    }
-    .d1-counter .current {
-        font-size: 3rem; line-height: 1; color: #D4A843; font-weight: 700;
-    }
-    .d1-counter .sep { font-size: 1.5rem; padding-bottom: 6px; }
-    .d1-counter .total { font-size: 1.4rem; padding-bottom: 4px; }
-
-    /* ── Progress bar ── */
-    .d1-progress {
-        position: absolute; bottom: 0; left: 0; height: 3px;
-        background: #D4A843; z-index: 10;
-        animation: d1Progress 5s linear forwards;
-    }
-    @keyframes d1Progress { from { width: 0 } to { width: 100% } }
-
-    /* ── Pagination dots (left bottom) ── */
-    .d1-hero .swiper-pagination {
-        position: absolute; bottom: 44px; left: 8%;
-        display: flex; gap: 10px; width: auto !important;
-    }
-    .d1-hero .swiper-pagination-bullet {
-        width: 6px; height: 6px; border-radius: 0;
-        background: rgba(255,255,255,0.35); opacity: 1;
-        transition: width 0.4s, background 0.4s;
-    }
-    .d1-hero .swiper-pagination-bullet-active {
-        width: 32px; background: #D4A843;
-    }
-
-    /* ── Scroll hint ── */
-    .d1-scroll-hint {
-        position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-        z-index: 10; display: flex; flex-direction: column; align-items: center;
-        gap: 8px; color: rgba(255,255,255,0.4);
-        font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-    }
-    .d1-scroll-hint .d1-scroll-line {
-        width: 1px; height: 40px; background: rgba(255,255,255,0.2);
-        position: relative; overflow: hidden;
-    }
-    .d1-scroll-line::after {
-        content: ''; position: absolute; top: -100%; left: 0;
-        width: 100%; height: 100%; background: #D4A843;
-        animation: scrollDrop 1.6s ease-in-out infinite;
-    }
-    @keyframes scrollDrop { 0%{top:-100%} 100%{top:100%} }
+    /* Pagination */
+    .d1-swiper .swiper-pagination { bottom: 28px !important; display: flex !important; justify-content: center; gap: 8px; width: 100% !important; }
+    .d1-swiper .swiper-pagination-bullet { width: 8px !important; height: 8px !important; border-radius: 0 !important; background: rgba(255,255,255,0.4) !important; opacity: 1 !important; transition: width 0.4s !important; margin: 0 !important; }
+    .d1-swiper .swiper-pagination-bullet-active { width: 28px !important; background: #D4A843 !important; }
 
     @media (max-width: 640px) {
-        .d1-hero .slide-content { padding: 0 5% 0 5%; }
-        .d1-nav { right: 16px; }
-        .d1-counter { right: 20px; bottom: 56px; }
-        .d1-scroll-hint { display: none; }
+        .d1-swiper { height: 460px !important; }
     }
 </style>
 
 <div class="d1-hero">
-    <div class="swiper d1Swiper">
-        <div class="swiper-wrapper">
 
-            {{-- Slide 1 --}}
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('{{ asset('images/hero-1.jpg') }}')"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-bottom"></div>
-                <div class="slide-content">
-                    <span class="d1-slide-tag">Desa Wisata</span>
-                    <h1 class="d1-slide-title">Glagah<em>wero</em></h1>
-                    <p class="d1-slide-desc">Desa yang kaya akan budaya, alam, dan kearifan lokal yang tumbuh di jantung Kabupaten Jember.</p>
-                    <a href="#" class="d1-slide-btn">
-                        Jelajahi Desa
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            {{-- Slide 2 --}}
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('{{ asset('images/hero-2.jpg') }}')"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-bottom"></div>
-                <div class="slide-content">
-                    <span class="d1-slide-tag">Alam & Budaya</span>
-                    <h1 class="d1-slide-title">Potensi<br><em>Tak Terbatas</em></h1>
-                    <p class="d1-slide-desc">Hamparan sawah, sungai jernih, dan produk lokal unggulan menjadi kekayaan yang kami jaga bersama.</p>
-                    <a href="#" class="d1-slide-btn">
-                        Produk Desa
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            {{-- Slide 3 --}}
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('{{ asset('images/hero-3.jpg') }}')"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-bottom"></div>
-                <div class="slide-content">
-                    <span class="d1-slide-tag">Pemerintahan</span>
-                    <h1 class="d1-slide-title">Melayani<br>dengan <em>Hati</em></h1>
-                    <p class="d1-slide-desc">Pemerintah desa Glagahwero berkomitmen memberikan pelayanan terbaik bagi seluruh warga masyarakat.</p>
-                    <a href="#" class="d1-slide-btn">
-                        Profil Desa
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Custom Prev/Next -->
-        <div class="d1-nav">
-            <button class="d1-nav-btn d1-prev" aria-label="Previous">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            </button>
-            <button class="d1-nav-btn d1-next" aria-label="Next">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-        </div>
-
-        <!-- Counter -->
-        <div class="d1-counter">
-            <span class="current" id="d1Current">01</span>
-            <span class="sep">/</span>
-            <span class="total">03</span>
-        </div>
-
-        <!-- Progress bar -->
-        <div class="d1-progress" id="d1Progress"></div>
-
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+    {{-- Progress bar --}}
+    <div class="absolute top-0 left-0 right-0 z-20 h-0.5 bg-white/10">
+        <div class="d1-bar" id="d1Bar"></div>
     </div>
 
-    <!-- Scroll hint -->
-    <div class="d1-scroll-hint">
-        <div class="d1-scroll-line"></div>
-        <span>Scroll</span>
+    <div class="swiper d1-swiper" id="d1Swiper">
+        <div class="swiper-wrapper">
+
+            {{-- ══ SLIDE 1 ══ --}}
+            <div class="swiper-slide">
+                <div class="d1-slide-bg" style="background-image:url('{{ asset('images/hero-1.jpg') }}')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center z-10">
+                    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6">
+                        <div class="d1-content-inner flex flex-col items-start gap-0">
+                            <span class="inline-flex items-center gap-3 text-[#D4A843] text-xs tracking-[0.3em] uppercase font-medium mb-4">
+                                <span class="inline-block w-10 h-px bg-[#D4A843]"></span>
+                                Desa Wisata
+                            </span>
+                            <h1 class="font-playfair text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-none">
+                                Glagah<em class="text-[#D4A843] italic">wero</em>
+                            </h1>
+                            <p class="mt-5 text-white/60 text-sm sm:text-base leading-relaxed max-w-md">
+                                Desa yang kaya akan budaya, alam, dan kearifan lokal yang tumbuh di jantung Kabupaten Jember.
+                            </p>
+                            <a href="#" class="mt-8 inline-flex items-center gap-3 border border-[#D4A843] text-[#D4A843] px-8 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-[#D4A843] hover:text-black transition-all duration-300">
+                                Jelajahi Desa
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- ══ SLIDE 2 ══ --}}
+            <div class="swiper-slide">
+                <div class="d1-slide-bg" style="background-image:url('{{ asset('images/hero-2.jpg') }}')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center z-10">
+                    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6">
+                        <div class="d1-content-inner flex flex-col items-start gap-0">
+                            <span class="inline-flex items-center gap-3 text-[#D4A843] text-xs tracking-[0.3em] uppercase font-medium mb-4">
+                                <span class="inline-block w-10 h-px bg-[#D4A843]"></span>
+                                Alam & Budaya
+                            </span>
+                            <h1 class="font-playfair text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-none">
+                                Potensi<br><em class="text-[#D4A843] italic">Tak Terbatas</em>
+                            </h1>
+                            <p class="mt-5 text-white/60 text-sm sm:text-base leading-relaxed max-w-md">
+                                Hamparan sawah, sungai jernih, dan produk lokal unggulan menjadi kekayaan yang kami jaga bersama.
+                            </p>
+                            <a href="#" class="mt-8 inline-flex items-center gap-3 border border-[#D4A843] text-[#D4A843] px-8 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-[#D4A843] hover:text-black transition-all duration-300">
+                                Produk Desa
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- ══ SLIDE 3 ══ --}}
+            <div class="swiper-slide">
+                <div class="d1-slide-bg" style="background-image:url('{{ asset('images/hero-3.jpg') }}')"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center z-10">
+                    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6">
+                        <div class="d1-content-inner flex flex-col items-start gap-0">
+                            <span class="inline-flex items-center gap-3 text-[#D4A843] text-xs tracking-[0.3em] uppercase font-medium mb-4">
+                                <span class="inline-block w-10 h-px bg-[#D4A843]"></span>
+                                Pemerintahan
+                            </span>
+                            <h1 class="font-playfair text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-none">
+                                Melayani<br>dengan <em class="text-[#D4A843] italic">Hati</em>
+                            </h1>
+                            <p class="mt-5 text-white/60 text-sm sm:text-base leading-relaxed max-w-md">
+                                Pemerintah desa Glagahwero berkomitmen memberikan pelayanan terbaik bagi seluruh warga masyarakat.
+                            </p>
+                            <a href="#" class="mt-8 inline-flex items-center gap-3 border border-[#D4A843] text-[#D4A843] px-8 py-3.5 text-xs tracking-[0.2em] uppercase hover:bg-[#D4A843] hover:text-black transition-all duration-300">
+                                Profil Desa
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- Pagination --}}
+        <div class="swiper-pagination"></div>
+
+        {{-- Nav --}}
+        <button class="d1-prev absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center border border-white/30 bg-white/5 backdrop-blur-sm text-white hover:border-[#D4A843] hover:bg-[#D4A843]/20 transition-all duration-300">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="d1-next absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center border border-white/30 bg-white/5 backdrop-blur-sm text-white hover:border-[#D4A843] hover:bg-[#D4A843]/20 transition-all duration-300">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        {{-- Counter --}}
+        <div class="absolute bottom-7 right-6 sm:right-10 z-10 flex items-end gap-1 text-white/40" style="font-family:'Playfair Display',serif">
+            <span class="text-4xl font-bold text-[#D4A843] leading-none" id="d1Cur">01</span>
+            <span class="text-lg pb-1">/</span>
+            <span class="text-lg pb-1">03</span>
+        </div>
+
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script>
 (function () {
-    const total = 3;
-    const currentEl = document.getElementById('d1Current');
-    const progressEl = document.getElementById('d1Progress');
+    const bar   = document.getElementById('d1Bar');
+    const cur   = document.getElementById('d1Cur');
+    const DELAY = 5000;
 
-    function resetProgress() {
-        progressEl.style.animation = 'none';
-        progressEl.offsetHeight; // reflow
-        progressEl.style.animation = 'd1Progress 5s linear forwards';
+    /* ── Animasi teks pakai JS (tidak bergantung CSS selector) ── */
+    function animateSlide(swiper) {
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        if (!activeSlide) return;
+
+        const els = activeSlide.querySelectorAll('.d1-content-inner > *');
+        els.forEach((el, i) => {
+            el.style.transition = 'none';
+            el.style.opacity    = '0';
+            el.style.transform  = 'translateY(22px)';
+            setTimeout(() => {
+                el.style.transition = `opacity 0.65s ease, transform 0.65s ease`;
+                el.style.transitionDelay = `${0.1 + i * 0.18}s`;
+                el.style.opacity    = '1';
+                el.style.transform  = 'translateY(0)';
+            }, 30);
+        });
     }
 
-    const d1Swiper = new Swiper('.d1Swiper', {
+    /* ── Progress bar ── */
+    function resetBar() {
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+        bar.offsetHeight; // reflow
+        bar.style.transition = `width ${DELAY}ms linear`;
+        bar.style.width = '100%';
+    }
+
+    /* ── Init Swiper ── */
+    const sw = new Swiper('#d1Swiper', {
         loop: true,
         speed: 900,
-        autoplay: { delay: 5000, disableOnInteraction: false },
+        autoplay: { delay: DELAY, disableOnInteraction: false },
         pagination: { el: '.swiper-pagination', clickable: true },
         navigation: { nextEl: '.d1-next', prevEl: '.d1-prev' },
         on: {
-            slideChange() {
-                const idx = this.realIndex;
-                currentEl.textContent = String(idx + 1).padStart(2, '0');
-                resetProgress();
-            }
+            afterInit(sw)  { animateSlide(sw); resetBar(); },
+            slideChange(sw){ cur.textContent = String(sw.realIndex + 1).padStart(2,'0'); },
+            slideChangeTransitionEnd(sw) { animateSlide(sw); resetBar(); },
         }
     });
 })();
