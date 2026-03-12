@@ -79,3 +79,99 @@
     @endif
 
 </div>
+
+@script
+<script>
+    function initSpot2() {
+        const track2 = document.getElementById('spotTrack2');
+        const outer2 = document.getElementById('spotOuter2');
+        if (!track2) return;
+
+        const cards2 = [...track2.querySelectorAll('.si2')];
+        const dots2  = [...document.querySelectorAll('#spotDots2 .sd2')];
+        const numEl2 = document.getElementById('spotNum2');
+        const N2 = cards2.length;
+        if (!N2) return;
+
+        let cur2 = 0, timer2;
+
+        function go2(idx) {
+            cur2 = ((idx % N2) + N2) % N2;
+
+            cards2.forEach((c, i) => {
+                const diff = Math.min(Math.abs(i - cur2), N2 - Math.abs(i - cur2));
+                const img  = c.querySelector('.si-img2');
+                const bar  = c.querySelector('.si-bar2');
+                const name = c.querySelector('.si-name2');
+                const jab  = c.querySelector('.si-jab2');
+
+                if (diff === 0) {
+                    c.style.filter    = 'brightness(1) saturate(1)';
+                    c.style.opacity   = '1';
+                    c.style.transform = 'scale(1)';
+                    c.style.width     = '256px';
+                    c.style.boxShadow = '0 0 0 2px rgba(13,43,94,0.4), 0 25px 60px rgba(13,43,94,0.2)';
+                    if (img)  img.style.height = '255px';
+                    if (bar)  bar.style.borderTopColor = 'rgba(29,78,216,0.4)';
+                    if (name) { name.style.opacity = '1'; name.style.transform = 'translateY(0)'; }
+                    if (jab)  jab.style.opacity = '1';
+                } else {
+                    const f = diff === 1 ? 'brightness(0.65) saturate(0.5)' : 'brightness(0.45) saturate(0.2)';
+                    const o = diff === 1 ? '0.8' : '0.5';
+                    const s = diff === 1 ? 'scale(0.96)' : 'scale(0.9)';
+                    c.style.filter    = f;
+                    c.style.opacity   = o;
+                    c.style.transform = s;
+                    c.style.width     = '192px';
+                    c.style.boxShadow = 'none';
+                    if (img)  img.style.height = '208px';
+                    if (bar)  bar.style.borderTopColor = 'transparent';
+                    if (name) { name.style.opacity = '0'; name.style.transform = 'translateY(-4px)'; }
+                    if (jab)  jab.style.opacity = '0';
+                }
+            });
+
+            const ac = cards2[cur2];
+            if (ac) {
+                track2.style.transform = `translateX(${-(ac.offsetLeft - outer2.offsetWidth / 2 + ac.offsetWidth / 2)}px)`;
+            }
+
+            dots2.forEach((d, i) => {
+                if (i === cur2) { d.style.width = '1.25rem'; d.style.borderRadius = '.25rem'; d.style.background = '#0D2B5E'; d.style.opacity = '1'; }
+                else            { d.style.width = '6px'; d.style.borderRadius = '9999px'; d.style.background = '#1D4ED8'; d.style.opacity = '0.3'; }
+            });
+
+            if (numEl2) numEl2.textContent = String(cur2 + 1).padStart(2, '0');
+        }
+
+        function start2() { clearInterval(timer2); timer2 = setInterval(() => go2(cur2 + 1), 3200); }
+
+        document.getElementById('spotNext2')?.addEventListener('click', () => { go2(cur2 + 1); start2(); });
+        document.getElementById('spotPrev2')?.addEventListener('click', () => { go2(cur2 - 1); start2(); });
+        dots2.forEach((d, i) => d.addEventListener('click', () => { go2(i); start2(); }));
+        cards2.forEach((c, i) => c.addEventListener('click', () => { go2(i); start2(); }));
+
+        const wrap2 = document.getElementById('spotWrap2');
+        if (wrap2) {
+            wrap2.addEventListener('mouseenter', () => clearInterval(timer2));
+            wrap2.addEventListener('mouseleave', start2);
+            let tx2 = 0;
+            wrap2.addEventListener('touchstart', e => { tx2 = e.touches[0].clientX; }, { passive: true });
+            wrap2.addEventListener('touchend', e => {
+                const dx = e.changedTouches[0].clientX - tx2;
+                if (Math.abs(dx) > 40) { go2(dx < 0 ? cur2 + 1 : cur2 - 1); start2(); }
+            }, { passive: true });
+        }
+
+        go2(0); start2();
+    }
+
+    // Jalankan setiap kali Livewire selesai re-render
+    document.addEventListener('livewire:navigated', () => initSpot2());
+    $wire.on('render', () => setTimeout(initSpot2, 100));
+    Livewire.hook('morph.updated', () => setTimeout(initSpot2, 100));
+
+    // Jalankan pertama kali
+    setTimeout(initSpot2, 300);
+</script>
+@endscript

@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Aparatur;
 
-class AparaturOptions1 extends Component  // fix nama class
+class AparturdOptions extends Component
 {
     public function render()
     {
