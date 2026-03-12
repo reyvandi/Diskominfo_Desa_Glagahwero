@@ -119,7 +119,7 @@
     <div class="max-w-6xl mx-auto">
         <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
 
-        <livewire:aparaturd-desa />
+        <livewire:aparatur-options2 />
 
         <div class="flex justify-center mt-8">
             <a href="{{ route('aparatur') }}" class="bg-[#C0392B] hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition text-sm">
