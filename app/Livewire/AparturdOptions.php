@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class AparturdOptions extends Component
+class AparaturOptions1 extends Component  // fix nama class
 {
     public function render()
     {
-        return view('livewire.aparatur-options2');
+        return view('livewire.aparatur.aparatur-options-1');  // fix path view
     }
 }

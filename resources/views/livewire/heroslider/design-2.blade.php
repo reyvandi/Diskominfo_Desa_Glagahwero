@@ -1,295 +1,257 @@
 {{-- ============================================================
-     HERO SLIDER — DESIGN 2
+     HERO SLIDER — DESIGN 2 (REBUILD — ANIMASI PAKAI JS)
      Tema     : Brutalist Split Screen
-     Ciri     : Layar terbagi 2 (teks kiri | gambar kanan),
-                tipografi ultra-bold condensed, aksen hijau neon,
-                animasi clip-path, nomor slide raksasa
+     Teks dijamin muncul, animasi JS bukan CSS selector
      Library  : Swiper 12 · Tailwind CDN
      ============================================================ --}}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-    /* ── Wrapper ── */
-    .d2-hero {
-        position: relative; width: 100%;
-        height: 100vh; min-height: 560px; overflow: hidden;
-        background: #0A0A0A; font-family: 'DM Sans', sans-serif;
+    .d2-hero { font-family: 'DM Sans', sans-serif; }
+    .font-bebas { font-family: 'Bebas Neue', sans-serif; }
+
+    /* Swiper override — scope ketat */
+    .d2-hero .d2-swiper              { width: 100% !important; height: 600px !important; background: #0A0A0A; }
+    .d2-hero .d2-swiper .swiper-wrapper { height: 100% !important; }
+    .d2-hero .d2-swiper .swiper-slide {
+        height: 100% !important;
+        display: flex !important;   /* split screen butuh flex */
+        overflow: hidden;
     }
 
-    .d2-hero .swiper,
-    .d2-hero .swiper-wrapper { width: 100%; height: 100%; }
+    /* Image zoom */
+    .d2-img-bg { transition: transform 6s ease; transform: scale(1.06); }
+    .d2-hero .d2-swiper .swiper-slide-active .d2-img-bg { transform: scale(1); }
 
-    /* ── Slide layout: flex row ── */
-    .d2-hero .swiper-slide {
-        display: flex; height: 100%; overflow: hidden;
+    /* Divider animasi */
+    .d2-divider-line::after {
+        content: ''; position: absolute; top: 0; left: 0;
+        width: 100%; height: 30%; background: #39FF14;
+        animation: d2drop 2.5s ease-in-out infinite;
     }
-
-    /* ── Left panel (text) ── */
-    .d2-left {
-        position: relative; z-index: 2;
-        width: 50%; max-width: 640px; height: 100%; background: #0A0A0A;
-        display: flex; flex-direction: column;
-        justify-content: flex-end; padding: 60px 8% 80px 8%;
-        flex-shrink: 0;
-    }
-    .d2-slide-num {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(6rem, 14vw, 14rem);
-        line-height: 0.85; color: #111;
-        position: absolute; top: 30px; left: 6%;
-        -webkit-text-stroke: 1px #1C1C1C;
-        user-select: none; pointer-events: none;
-    }
-    .d2-tag {
-        display: inline-flex; align-items: center; gap: 10px;
-        font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
-        color: #39FF14; font-weight: 500; margin-bottom: 18px;
-        opacity: 0; transform: translateX(-24px);
-        transition: opacity 0.6s 0.15s, transform 0.6s 0.15s;
-    }
-    .d2-tag::after {
-        content: ''; display: inline-block;
-        width: 32px; height: 1px; background: #39FF14;
-    }
-    .d2-title {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(3.5rem, 6vw, 6.5rem);
-        line-height: 0.95; color: #F5F5F5;
-        letter-spacing: 0.03em;
-        opacity: 0; transform: translateX(-30px);
-        transition: opacity 0.7s 0.35s, transform 0.7s 0.35s;
-    }
-    .d2-title span { color: #39FF14; }
-    .d2-desc {
-        margin-top: 22px; font-size: 0.88rem; line-height: 1.7;
-        color: rgba(255,255,255,0.45); max-width: 320px;
-        opacity: 0; transform: translateX(-20px);
-        transition: opacity 0.6s 0.55s, transform 0.6s 0.55s;
-    }
-    .d2-actions {
-        margin-top: 36px; display: flex; gap: 14px; align-items: center;
-        opacity: 0; transform: translateX(-20px);
-        transition: opacity 0.6s 0.7s, transform 0.6s 0.7s;
-    }
-    .d2-btn-primary {
-        background: #39FF14; color: #0A0A0A;
-        padding: 13px 28px; font-size: 0.78rem;
-        font-weight: 700; letter-spacing: 0.15em;
-        text-transform: uppercase; text-decoration: none;
-        transition: opacity 0.3s;
-    }
-    .d2-btn-primary:hover { opacity: 0.85; }
-    .d2-btn-ghost {
-        border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.5);
-        padding: 12px 24px; font-size: 0.78rem;
-        letter-spacing: 0.1em; text-transform: uppercase;
-        text-decoration: none;
-        transition: border-color 0.3s, color 0.3s;
-    }
-    .d2-btn-ghost:hover { border-color: #39FF14; color: #39FF14; }
-
-    /* Active reveal */
-    .d2-hero .swiper-slide-active .d2-tag,
-    .d2-hero .swiper-slide-active .d2-title,
-    .d2-hero .swiper-slide-active .d2-desc,
-    .d2-hero .swiper-slide-active .d2-actions {
-        opacity: 1; transform: translateX(0);
-    }
-
-    /* ── Right panel (image) ── */
-    .d2-right {
-        position: relative; flex: 1; overflow: hidden;
-    }
-    .d2-img {
-        position: absolute; inset: 0;
-        background-size: cover; background-position: center;
-        transform: scale(1.06);
-        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
-        transition: transform 6s ease;
-    }
-    .d2-hero .swiper-slide-active .d2-img { transform: scale(1); }
-    .d2-img-overlay {
-        position: absolute; inset: 0;
-        background: linear-gradient(to right, #0A0A0A 0%, rgba(10,10,10,0.0) 40%);
-        z-index: 1;
-    }
-
-    /* ── Divider line ── */
-    .d2-divider {
-        position: absolute; left: 50%; top: 10%; bottom: 10%;
-        width: 1px; background: rgba(57,255,20,0.15); z-index: 3;
-    }
-    .d2-divider::after {
-        content: ''; position: absolute;
-        top: 0; left: 0; width: 100%; height: 30%;
-        background: #39FF14;
-        animation: d2DividerDrop 2.5s ease-in-out infinite;
-    }
-    @keyframes d2DividerDrop {
-        0%   { top: 0; height: 0; opacity: 0; }
+    @keyframes d2drop {
+        0%   { top: 0;   height: 0;   opacity: 0; }
         30%  { opacity: 1; }
         70%  { top: 70%; height: 30%; opacity: 1; }
         100% { top: 100%; height: 0; opacity: 0; }
     }
 
-    /* ── Bottom controls ── */
-    .d2-controls {
-        position: absolute; bottom: 0; left: 0; right: 0; height: 70px;
-        background: rgba(10,10,10,0.9); backdrop-filter: blur(8px);
-        z-index: 10; display: flex; align-items: center;
-        padding: 0 8%; gap: 24px;
-        border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .d2-ctrl-label {
-        font-size: 0.65rem; color: rgba(255,255,255,0.3);
-        letter-spacing: 0.2em; text-transform: uppercase;
-        margin-right: auto;
-    }
-    .d2-ctrl-dots { display: flex; gap: 8px; align-items: center; }
-    .d2-ctrl-dots .d2-dot {
-        width: 8px; height: 2px; background: rgba(255,255,255,0.2);
-        cursor: pointer; transition: width 0.4s, background 0.4s;
-    }
-    .d2-ctrl-dots .d2-dot.active { width: 28px; background: #39FF14; }
-    .d2-ctrl-btns { display: flex; gap: 2px; }
-    .d2-ctrl-btn {
-        width: 46px; height: 46px; background: transparent;
-        border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.5); display: flex;
-        align-items: center; justify-content: center;
-        cursor: pointer; transition: background 0.3s, color 0.3s, border-color 0.3s;
-    }
-    .d2-ctrl-btn:hover { background: #39FF14; color: #0A0A0A; border-color: #39FF14; }
+    /* Dot nav */
+    .d2-dot { width: 8px; height: 2px; background: rgba(255,255,255,0.2); cursor: pointer; transition: width 0.4s, background 0.4s; }
+    .d2-dot.active { width: 28px; background: #39FF14; }
 
-    /* ── Vertical slide text (right side) ── */
-    .d2-vert-text {
-        position: absolute; right: 24px; top: 50%; z-index: 10;
-        transform: translateY(-50%) rotate(90deg);
-        font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
-        color: rgba(255,255,255,0.2); white-space: nowrap;
-    }
-
-    /* ── Mobile ── */
     @media (max-width: 640px) {
-        .d2-hero .swiper-slide { flex-direction: column; }
-        .d2-left { width: 100%; height: 55%; padding: 40px 6% 30px; }
-        .d2-right { height: 45%; }
-        .d2-img { clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
-        .d2-divider { display: none; }
-        .d2-vert-text { display: none; }
-        .d2-slide-num { font-size: 5rem; }
+        .d2-hero .d2-swiper              { height: 560px !important; }
+        .d2-hero .d2-swiper .swiper-slide { flex-direction: column !important; }
+        .d2-left-panel  { width: 100% !important; height: 55% !important; }
+        .d2-right-panel { height: 45% !important; }
     }
 </style>
 
-<div class="d2-hero">
-    <div class="swiper d2Swiper">
+<div class="d2-hero relative w-full overflow-hidden">
+    <div class="swiper d2-swiper" id="d2Swiper">
         <div class="swiper-wrapper">
 
-            {{-- Slide 1 --}}
+            {{-- ══ SLIDE 1 ══ --}}
             <div class="swiper-slide">
-                <div class="max-w-7xl mx-auto w-full flex h-full">
-                    <div class="d2-left max-w-7xl mx-auto">
-                        <div class="d2-slide-num">01</div>
-                        <div class="d2-tag">Desa Wisata</div>
-                        <h1 class="d2-title">GLAGAH<span>WERO</span></h1>
-                        <p class="d2-desc">Surga tersembunyi di Jember yang menyimpan kekayaan budaya dan keindahan alam yang tak ternilai.</p>
-                        <div class="d2-actions">
-                            <a href="#" class="d2-btn-primary">Jelajahi</a>
-                            <a href="#" class="d2-btn-ghost">Pelajari</a>
+                {{-- Kiri: Teks --}}
+                <div class="d2-left-panel relative z-10 flex flex-col justify-end bg-[#0A0A0A]"
+                     style="width:50%; flex-shrink:0; padding: 60px 8% 100px;">
+                    {{-- Nomor dekorasi --}}
+                    <div class="font-bebas absolute top-6 left-[6%] text-[#111] select-none pointer-events-none leading-none"
+                         style="font-size: clamp(5rem,12vw,12rem); -webkit-text-stroke: 1px #1C1C1C;">01</div>
+
+                    {{-- Konten animasi JS --}}
+                    <div class="d2-anim-wrap flex flex-col gap-0">
+                        <div class="d2-anim-el">
+                            <span class="inline-flex items-center gap-2 text-[#39FF14] text-xs tracking-[0.25em] uppercase font-medium">
+                                Desa Wisata
+                                <span class="inline-block w-8 h-px bg-[#39FF14]"></span>
+                            </span>
+                        </div>
+                        <div class="d2-anim-el mt-3">
+                            <h1 class="font-bebas text-white leading-none" style="font-size: clamp(3.5rem,6vw,6.5rem); letter-spacing:0.03em;">
+                                GLAGAH<span class="text-[#39FF14]">WERO</span>
+                            </h1>
+                        </div>
+                        <div class="d2-anim-el mt-5">
+                            <p class="text-white/45 text-sm leading-relaxed max-w-xs">
+                                Surga tersembunyi di Jember yang menyimpan kekayaan budaya dan keindahan alam yang tak ternilai.
+                            </p>
+                        </div>
+                        <div class="d2-anim-el mt-8 flex gap-3 flex-wrap">
+                            <a href="#" class="bg-[#39FF14] text-[#0A0A0A] px-7 py-3 text-xs font-bold tracking-[0.15em] uppercase hover:opacity-80 transition-opacity">Jelajahi</a>
+                            <a href="#" class="border border-white/20 text-white/50 px-6 py-3 text-xs tracking-[0.1em] uppercase hover:border-[#39FF14] hover:text-[#39FF14] transition-all">Pelajari</a>
                         </div>
                     </div>
-                    <div class="d2-right">
-                        <div class="d2-img" style="background-image: url('{{ asset('images/hero-1.jpg') }}')"></div>
-                        <div class="d2-img-overlay"></div>
-                    </div>
+                </div>
+
+                {{-- Kanan: Gambar --}}
+                <div class="d2-right-panel relative flex-1 overflow-hidden">
+                    <div class="d2-img-bg absolute inset-0 bg-cover bg-center"
+                         style="background-image:url('{{ asset('images/hero-1.jpg') }}');
+                                clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                    <div class="absolute inset-0 z-10"
+                         style="background: linear-gradient(to right, #0A0A0A 0%, transparent 35%)"></div>
                 </div>
             </div>
 
-            {{-- Slide 2 --}}
+            {{-- ══ SLIDE 2 ══ --}}
             <div class="swiper-slide">
-                 
-                    <div class="d2-left">
-                        <div class="d2-slide-num">02</div>
-                        <div class="d2-tag">Potensi Lokal</div>
-                        <h1 class="d2-title">PRODUK<span> DESA</span></h1>
-                        <p class="d2-desc">UMKM lokal yang bergeliat menghadirkan produk-produk unggulan khas Glagahwero ke pasar nasional.</p>
-                        <div class="d2-actions">
-                            <a href="#" class="d2-btn-primary">Lihat Produk</a>
-                            <a href="#" class="d2-btn-ghost">Info Lebih</a>
+                <div class="d2-left-panel relative z-10 flex flex-col justify-end bg-[#0A0A0A]"
+                     style="width:50%; flex-shrink:0; padding: 60px 8% 100px;">
+                    <div class="font-bebas absolute top-6 left-[6%] text-[#111] select-none pointer-events-none leading-none"
+                         style="font-size: clamp(5rem,12vw,12rem); -webkit-text-stroke: 1px #1C1C1C;">02</div>
+
+                    <div class="d2-anim-wrap flex flex-col gap-0">
+                        <div class="d2-anim-el">
+                            <span class="inline-flex items-center gap-2 text-[#39FF14] text-xs tracking-[0.25em] uppercase font-medium">
+                                Potensi Lokal
+                                <span class="inline-block w-8 h-px bg-[#39FF14]"></span>
+                            </span>
+                        </div>
+                        <div class="d2-anim-el mt-3">
+                            <h1 class="font-bebas text-white leading-none" style="font-size: clamp(3.5rem,6vw,6.5rem); letter-spacing:0.03em;">
+                                PRODUK<span class="text-[#39FF14]"> DESA</span>
+                            </h1>
+                        </div>
+                        <div class="d2-anim-el mt-5">
+                            <p class="text-white/45 text-sm leading-relaxed max-w-xs">
+                                UMKM lokal yang bergeliat menghadirkan produk-produk unggulan khas Glagahwero ke pasar nasional.
+                            </p>
+                        </div>
+                        <div class="d2-anim-el mt-8 flex gap-3 flex-wrap">
+                            <a href="#" class="bg-[#39FF14] text-[#0A0A0A] px-7 py-3 text-xs font-bold tracking-[0.15em] uppercase hover:opacity-80 transition-opacity">Lihat Produk</a>
+                            <a href="#" class="border border-white/20 text-white/50 px-6 py-3 text-xs tracking-[0.1em] uppercase hover:border-[#39FF14] hover:text-[#39FF14] transition-all">Info Lebih</a>
                         </div>
                     </div>
-                    <div class="d2-right">
-                        <div class="d2-img" style="background-image: url('{{ asset('images/hero-2.jpg') }}')"></div>
-                        <div class="d2-img-overlay"></div>
-                    </div>
+                </div>
+
+                <div class="d2-right-panel relative flex-1 overflow-hidden">
+                    <div class="d2-img-bg absolute inset-0 bg-cover bg-center"
+                         style="background-image:url('{{ asset('images/hero-2.jpg') }}');
+                                clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                    <div class="absolute inset-0 z-10"
+                         style="background: linear-gradient(to right, #0A0A0A 0%, transparent 35%)"></div>
+                </div>
             </div>
 
-            {{-- Slide 3 --}}
+            {{-- ══ SLIDE 3 ══ --}}
             <div class="swiper-slide">
-                <div class="d2-left">
-                    <div class="d2-slide-num">03</div>
-                    <div class="d2-tag">Pemerintahan</div>
-                    <h1 class="d2-title">LAYANAN<span> PRIMA</span></h1>
-                    <p class="d2-desc">Transparansi dan dedikasi penuh dari aparat desa dalam melayani setiap kebutuhan masyarakat.</p>
-                    <div class="d2-actions">
-                        <a href="#" class="d2-btn-primary">Profil Desa</a>
-                        <a href="#" class="d2-btn-ghost">Kontak</a>
+                <div class="d2-left-panel relative z-10 flex flex-col justify-end bg-[#0A0A0A]"
+                     style="width:50%; flex-shrink:0; padding: 60px 8% 100px;">
+                    <div class="font-bebas absolute top-6 left-[6%] text-[#111] select-none pointer-events-none leading-none"
+                         style="font-size: clamp(5rem,12vw,12rem); -webkit-text-stroke: 1px #1C1C1C;">03</div>
+
+                    <div class="d2-anim-wrap flex flex-col gap-0">
+                        <div class="d2-anim-el">
+                            <span class="inline-flex items-center gap-2 text-[#39FF14] text-xs tracking-[0.25em] uppercase font-medium">
+                                Pemerintahan
+                                <span class="inline-block w-8 h-px bg-[#39FF14]"></span>
+                            </span>
+                        </div>
+                        <div class="d2-anim-el mt-3">
+                            <h1 class="font-bebas text-white leading-none" style="font-size: clamp(3.5rem,6vw,6.5rem); letter-spacing:0.03em;">
+                                LAYANAN<span class="text-[#39FF14]"> PRIMA</span>
+                            </h1>
+                        </div>
+                        <div class="d2-anim-el mt-5">
+                            <p class="text-white/45 text-sm leading-relaxed max-w-xs">
+                                Transparansi dan dedikasi penuh dari aparat desa dalam melayani setiap kebutuhan masyarakat.
+                            </p>
+                        </div>
+                        <div class="d2-anim-el mt-8 flex gap-3 flex-wrap">
+                            <a href="#" class="bg-[#39FF14] text-[#0A0A0A] px-7 py-3 text-xs font-bold tracking-[0.15em] uppercase hover:opacity-80 transition-opacity">Profil Desa</a>
+                            <a href="#" class="border border-white/20 text-white/50 px-6 py-3 text-xs tracking-[0.1em] uppercase hover:border-[#39FF14] hover:text-[#39FF14] transition-all">Kontak</a>
+                        </div>
                     </div>
                 </div>
-                <div class="d2-right">
-                    <div class="d2-img" style="background-image: url('{{ asset('images/hero-3.jpg') }}')"></div>
-                    <div class="d2-img-overlay"></div>
+
+                <div class="d2-right-panel relative flex-1 overflow-hidden">
+                    <div class="d2-img-bg absolute inset-0 bg-cover bg-center"
+                         style="background-image:url('{{ asset('images/hero-3.jpg') }}');
+                                clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+                    <div class="absolute inset-0 z-10"
+                         style="background: linear-gradient(to right, #0A0A0A 0%, transparent 35%)"></div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Divider line -->
-        <div class="d2-divider"></div>
+        {{-- Divider tengah --}}
+        <div class="d2-divider-line absolute top-[10%] bottom-[10%] z-20 overflow-hidden"
+             style="left: 50%; width: 1px; background: rgba(57,255,20,0.12);"></div>
 
-        <!-- Vertical label -->
-        <div class="d2-vert-text">Glagahwero · Jember · Jawa Timur</div>
+        {{-- Label vertikal kanan --}}
+        <div class="absolute right-6 top-1/2 z-20 hidden sm:block text-white/20 text-[0.6rem] tracking-[0.3em] uppercase whitespace-nowrap"
+             style="transform: translateY(-50%) rotate(90deg);">
+            Glagahwero · Jember · Jawa Timur
+        </div>
 
-        <!-- Bottom controls -->
-        <div class="d2-controls">
-            <span class="d2-ctrl-label">Desa Glagahwero</span>
-            <div class="d2-ctrl-dots" id="d2Dots">
+        {{-- Bottom bar --}}
+        <div class="absolute bottom-0 left-0 right-0 z-20 flex items-center gap-6 px-8 sm:px-12"
+             style="height:70px; background: rgba(10,10,10,0.92); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,0.06);">
+            <span class="text-white/30 text-[0.62rem] tracking-[0.2em] uppercase mr-auto">Desa Glagahwero</span>
+            <div class="flex gap-2 items-center" id="d2Dots">
                 <div class="d2-dot active" data-idx="0"></div>
                 <div class="d2-dot" data-idx="1"></div>
                 <div class="d2-dot" data-idx="2"></div>
             </div>
-            <div class="d2-ctrl-btns">
-                <button class="d2-ctrl-btn d2-prev" aria-label="Prev">
+            <div class="flex gap-0.5">
+                <button class="d2-prev w-11 h-11 flex items-center justify-center border border-white/10 text-white/50 hover:bg-[#39FF14] hover:text-[#0A0A0A] hover:border-[#39FF14] transition-all duration-300">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                 </button>
-                <button class="d2-ctrl-btn d2-next" aria-label="Next">
+                <button class="d2-next w-11 h-11 flex items-center justify-center border border-white/10 text-white/50 hover:bg-[#39FF14] hover:text-[#0A0A0A] hover:border-[#39FF14] transition-all duration-300">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
             </div>
         </div>
+
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script>
 (function () {
+    /* ── Animasi teks 100% JS ── */
+    function animateSlide(swiper) {
+        const slide = swiper.slides[swiper.activeIndex];
+        if (!slide) return;
+        const els = slide.querySelectorAll('.d2-anim-el');
+        els.forEach((el, i) => {
+            el.style.transition  = 'none';
+            el.style.opacity     = '0';
+            el.style.transform   = 'translateX(-22px)';
+            setTimeout(() => {
+                el.style.transition      = 'opacity 0.6s ease, transform 0.6s ease';
+                el.style.transitionDelay = `${0.1 + i * 0.16}s`;
+                el.style.opacity         = '1';
+                el.style.transform       = 'translateX(0)';
+            }, 30);
+        });
+    }
+
+    /* ── Dots ── */
     const dots = document.querySelectorAll('#d2Dots .d2-dot');
     function setDot(idx) {
         dots.forEach((d, i) => d.classList.toggle('active', i === idx));
     }
-    dots.forEach(d => {
-        d.addEventListener('click', () => d2sw.slideTo(+d.dataset.idx));
-    });
 
-    const d2sw = new Swiper('.d2Swiper', {
+    /* ── Swiper ── */
+    const sw = new Swiper('#d2Swiper', {
         loop: false,
         speed: 850,
         autoplay: { delay: 5500, disableOnInteraction: false },
         navigation: { nextEl: '.d2-next', prevEl: '.d2-prev' },
-        on: { slideChange() { setDot(this.activeIndex); } }
+        on: {
+            afterInit(sw)               { animateSlide(sw); },
+            slideChangeTransitionEnd(sw){ animateSlide(sw); setDot(sw.activeIndex); },
+            slideChange(sw)             { setDot(sw.activeIndex); }
+        }
     });
+
+    dots.forEach(d => d.addEventListener('click', () => sw.slideTo(+d.dataset.idx)));
 })();
 </script>
