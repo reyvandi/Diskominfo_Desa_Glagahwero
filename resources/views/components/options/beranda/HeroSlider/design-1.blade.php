@@ -276,7 +276,9 @@
         speed: 900,
         autoplay: { delay: 5000, disableOnInteraction: false },
         pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.d1-next', prevEl: '.d1-prev' },
+        const btnNext = el.querySelector('.d1-next');
+        const btnPrev = el.querySelector('.d1-prev');
+        navigation: { nextEl: btnNext, prevEl: btnPrev },
         on: {
             slideChange() {
                 const idx = this.realIndex;
