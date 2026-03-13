@@ -29,7 +29,7 @@
             @endif
         </div>
 
-        {{-- DROPDOWN 2: DESIGN (hanya muncul jika komponen sudah dipilih) --}}
+        {{-- DROPDOWN 2: DESIGN --}}
         @if($selectedComponent)
         <div class="relative">
             <button wire:click="toggleDesignDropdown"
@@ -64,10 +64,19 @@
     <div class="w-full">
         @if($selectedComponent === 'heroslider')
             @include('livewire.heroslider.design-' . $selectedDesign)
+
         @elseif($selectedComponent === 'aparatur')
             @include('livewire.aparatur.aparatur-options' . $selectedDesign)
+
+        @elseif($selectedComponent === 'produk')
+            @include('livewire.produk.produk-options' . $selectedDesign, [
+                'produk'   => $previewProduk,
+                'tabs'     => $previewTabs,
+                'aktifTab' => $previewTab,
+            ])
         @endif
     </div>
+
     @elseif(!$selectedComponent)
     <div class="flex items-center justify-center h-64 bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 text-gray-400">
         <p class="text-lg">← Pilih komponen terlebih dahulu</p>
@@ -166,12 +175,9 @@
         go2(0); start2();
     }
 
-    // Jalankan setiap kali Livewire selesai re-render
     document.addEventListener('livewire:navigated', () => initSpot2());
     $wire.on('render', () => setTimeout(initSpot2, 100));
     Livewire.hook('morph.updated', () => setTimeout(initSpot2, 100));
-
-    // Jalankan pertama kali
     setTimeout(initSpot2, 300);
 </script>
 @endscript
