@@ -670,17 +670,16 @@
        Ini lebih reliable dari $wire.on('render') di Livewire 3.
     ================================================================ */
     function initAll() {
-
+        // Destroy semua swiper aktif dulu
         document.querySelectorAll('.swiper').forEach(el => {
-            if (el.swiper) {
-                el.swiper.destroy(true, true);
-            }
+            if (el.swiper) el.swiper.destroy(true, true);
         });
 
-        initD1Swiper();
-        initD2Swiper();
-        initD3Swiper();
-        initSpot2();
+        // Cek elemen mana yang ada di DOM, baru init
+        if (document.getElementById('d1Swiper')) initD1Swiper();
+        if (document.getElementById('d2Swiper')) initD2Swiper();
+        if (document.getElementById('d3Swiper')) initD3Swiper();
+        if (document.getElementById('spotTrack2')) initSpot2();
     }
 
     // Hook paling reliable di Livewire 3: difire setelah commit selesai

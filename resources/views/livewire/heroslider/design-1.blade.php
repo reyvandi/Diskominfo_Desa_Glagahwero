@@ -1,15 +1,6 @@
-{{-- ============================================================
-     HERO SLIDER — DESIGN 1 (v5 — PURE TAILWIND, ZERO <style>)
-     - Tidak ada <style> block sama sekali
-     - Semua styling pakai Tailwind utility classes
-     - Swiper-specific styling (bullet, wrapper) diset via JS
-     - wire:ignore mencegah Livewire morph elemen ini
-     - CDN Swiper di layout utama, script init di @script previewer
-     ============================================================ --}}
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-<div class="d1-hero relative w-full overflow-hidden" style="font-family:'Jost',sans-serif" wire:ignore>
+<div class="d1-hero relative w-full overflow-hidden" style="font-family:'Jost',sans-serif">
 
     {{-- Progress bar --}}
     <div class="absolute top-0 left-0 right-0 z-20 h-0.5 bg-white/10">
@@ -108,7 +99,7 @@
 
         </div>
 
-        {{-- Pagination — bullet styling diset via JS di initD1Swiper --}}
+        {{-- Pagination --}}
         <div class="swiper-pagination"></div>
 
         {{-- Nav Prev --}}
