@@ -29,12 +29,14 @@ class DesignPreviewer extends Component
     public $components = [
         'heroslider' => 'Hero Slider',
         'aparatur'   => 'Aparatur Design',
+        'aparatur-Halaman' => 'Aparatur Halaman',  // ← tambah ini
         'produk'     => 'Produk Desa',  // tambah ini
     ];
 
     public $designs = [
         'heroslider' => [1, 2, 3],
         'aparatur'   => [1, 2, 3],
+        'aparatur-Halaman' => [1, 2, 3],  // tambah ini
         'produk'     => [1, 2, 3, 4],  // tambah ini
     ];
 

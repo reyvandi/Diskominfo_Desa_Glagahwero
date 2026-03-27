@@ -76,10 +76,6 @@
                     <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
                     <h2 class="text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Perangkat Desa</h2>
                 </div>
-                <input wire:model.live.debounce.300ms="search"
-                       type="text"
-                       placeholder="Cari nama atau jabatan..."
-                       class="w-full sm:w-64 px-4 py-2 rounded-xl border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             @if($perangkat->isEmpty())

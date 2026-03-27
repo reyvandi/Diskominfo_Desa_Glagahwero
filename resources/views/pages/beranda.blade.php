@@ -31,16 +31,86 @@
         .swiper { height: 240px; }
         .font-dancing { font-size: 3rem !important; }
     }
+
+    /* ── ANIMASI HERO TEXT ── */
+    @keyframes heroFadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-text {
+        animation: heroFadeUp 1s ease forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+
+    /* ── REVEAL BLOCKS ── */
+    .reveal {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ── SAMBUTAN FOTO FRAME ── */
+    .foto-frame {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+    }
+    .foto-frame.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* ── SAMBUTAN TEKS ── */
+    .sambutan-text {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
+    }
+    .sambutan-text.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* ── COUNTER angka ── */
+    .stat-card {
+        opacity: 0;
+        transform: translateY(24px) scale(0.95);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .stat-card.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    /* ── SECTION HEADING garis ── */
+    .section-heading::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #1D4ED8;
+        border-radius: 4px;
+        margin: 8px auto 0;
+        transition: width 0.8s ease;
+    }
+    .section-heading.lined::after {
+        width: 60px;
+    }
 </style>
 
 <!-- ===== 1. HERO SLIDER ===== -->
 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #F59E0B;" class="swiper mySwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image: url('{{ asset('images/hero-1.jpg') }}'); background-size: cover; background-position: center;">
-            <h1 class="font-dancing text-8xl sm:text-7xl text-white relative z-10" style="text-shadow: 2px 4px 20px rgba(0,0,0,0.4);">Glagahwero</h1>
+            <h1 class="hero-text font-dancing text-8xl sm:text-7xl text-white relative z-10" style="text-shadow: 2px 4px 20px rgba(0,0,0,0.4);">Glagahwero</h1>
         </div>
         <div class="swiper-slide" style="background-image: url('{{ asset('images/hero-2.jpg') }}'); background-size: cover; background-position: center;">
-            <p class="text-base text-white relative z-10">Jember</p>
+            <p class="hero-text text-base text-white relative z-10">Jember</p>
         </div>
         <div class="swiper-slide" style="background-image: url('{{ asset('images/hero-3.jpg') }}'); background-size: cover; background-position: center;"></div>
     </div>
@@ -52,17 +122,21 @@
 
 <!-- ===== 2. BERITA DESA ===== -->
 <section class="py-12 bg-[#F4F8FD]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10 section-heading">Berita Desa</h2>
         @livewire('berita-desa')
     </div>
 </section>
 
+
 <!-- ===== 3. SELAMAT DATANG ===== -->
 <section class="py-14 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Selamat Datang</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10 section-heading reveal">Selamat Datang</h2>
         <div class="flex flex-col-reverse sm:flex-row gap-8 sm:gap-10 items-center sm:items-start">
-            <div class="flex-1 w-full">
+
+            {{-- Teks sambutan --}}
+            <div class="flex-1 w-full sambutan-text">
                 <div class="flex items-center gap-3 mb-5">
                     <div class="w-1 h-6 bg-[#1D4ED8] rounded"></div>
                     <h3 class="text-xs sm:text-sm font-bold text-[#0D2B5E] uppercase tracking-widest">Sambutan Kepala Desa Glagahwero</h3>
@@ -98,7 +172,9 @@
                     </div>
                 </div>
             </div>
-            <div class="relative w-52 sm:w-64 h-64 sm:h-80 mx-auto sm:mx-0 flex-shrink-0">
+
+            {{-- Foto --}}
+            <div class="relative w-52 sm:w-64 h-64 sm:h-80 mx-auto sm:mx-0 flex-shrink-0 foto-frame">
                 <div class="absolute inset-4 bg-gray-300 overflow-hidden z-10">
                     <img src="{{ $foto ?? asset('images/hero-1.jpg') }}" alt="Foto" class="w-full h-full object-cover object-top">
                 </div>
@@ -111,18 +187,22 @@
                     <div class="absolute bottom-0 right-0 bg-blue-600" style="width: 8px; height: 40px;"></div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
+
 <!-- ===== 4. APARATUR ===== -->
 <section id="section-aparatur" class="py-14 pb-6 px-4 sm:px-6 bg-[#F4F8FD]">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10">Aparat Pemerintah Desa</h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0D2B5E] mb-10 section-heading reveal">Aparat Pemerintah Desa</h2>
 
-        <livewire:aparaturd-desa />
+        <div class="reveal">
+            <livewire:aparaturd-desa />
+        </div>
 
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 reveal">
             <a href="{{ route('aparatur') }}" class="bg-[#C0392B] hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition text-sm">
                 Lihat Data Selengkapnya
             </a>
@@ -131,16 +211,17 @@
 </section>
 
 
-
 <!-- ===== 5. PRODUK DESA ===== -->
 <section class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
         <livewire:produk-desa />
     </div>
 </section>
 
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script>
+    /* ── SWIPER ── */
     const swiper = new Swiper(".mySwiper", {
         effect: "fade",
         fadeEffect: { crossFade: true },
@@ -149,12 +230,50 @@
         speed: 800,
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         pagination: { el: ".swiper-pagination", clickable: true },
+        on: {
+            // Re-trigger hero text animasi setiap slide ganti
+            slideChangeTransitionStart() {
+                document.querySelectorAll('.hero-text').forEach(el => {
+                    el.style.animation = 'none';
+                    el.offsetHeight; // reflow
+                    el.style.animation = '';
+                });
+            }
+        }
     });
 
-    // ===== INTERSECTION OBSERVER APARAT =====
+    /* ── INTERSECTION OBSERVER: reveal & section-heading ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+
+            // Delay bertingkat jika ada banyak elemen sekaligus
+            setTimeout(() => {
+                el.classList.add('visible');
+                // Trigger garis bawah heading
+                if (el.classList.contains('section-heading')) {
+                    el.classList.add('lined');
+                }
+            }, 80);
+
+            revealObserver.unobserve(el);
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .sambutan-text, .foto-frame').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Section heading yang berdiri sendiri (tidak dalam .reveal)
+    document.querySelectorAll('.section-heading').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    /* ── APARATUR scroll animation ── */
     const aparaturSection = document.getElementById('section-aparatur');
     const scrollEl = document.querySelector('.animate-scroll-aparat');
-    const observer = new IntersectionObserver((entries) => {
+    const aparaturObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 scrollEl?.classList.add('playing');
@@ -163,7 +282,7 @@
             }
         });
     }, { threshold: 0.2 });
-    if (aparaturSection) observer.observe(aparaturSection);
+    if (aparaturSection) aparaturObserver.observe(aparaturSection);
 </script>
 
 @endsection

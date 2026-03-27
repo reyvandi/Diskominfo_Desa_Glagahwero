@@ -68,6 +68,9 @@
         @elseif($selectedComponent === 'aparatur')
             @include('livewire.aparatur.aparatur-options' . $selectedDesign)
 
+        @elseif($selectedComponent === 'aparatur-halaman')
+            @include('livewire.aparatur.aparatur-Halaman.aparatur-design' . $selectedDesign)
+
         @elseif($selectedComponent === 'produk')
             @include('livewire.produk.produk-options' . $selectedDesign, [
                 'produk'   => $previewProduk,
