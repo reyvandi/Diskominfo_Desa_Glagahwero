@@ -7,7 +7,7 @@
         <div class="relative">
             <button wire:click="toggleComponentDropdown"
                 class="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition min-w-[180px] justify-between">
-                <span>{{ $selectedComponent ? $components[$selectedComponent] : '📦 Pilih Komponen' }}</span>
+                <span>{{ $selectedComponent ? $components[$selectedComponent] : 'Pilih Komponen' }}</span>
                 <svg class="w-4 h-4 transition-transform {{ $showComponentDropdown ? 'rotate-180' : '' }}"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -34,7 +34,7 @@
         <div class="relative">
             <button wire:click="toggleDesignDropdown"
                 class="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition min-w-[150px] justify-between">
-                <span>{{ $selectedDesign ? '🎨 Design ' . $selectedDesign : '🎨 Pilih Design' }}</span>
+                <span>{{ $selectedDesign ? 'Design ' . $selectedDesign : 'Pilih Design' }}</span>
                 <svg class="w-4 h-4 transition-transform {{ $showDesignDropdown ? 'rotate-180' : '' }}"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -89,7 +89,7 @@
 
 </div>
 
-@script
+ @script
 <script>
     /* ================================================================
        HERO SLIDER D1
